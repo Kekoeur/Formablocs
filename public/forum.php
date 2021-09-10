@@ -102,7 +102,7 @@ require_once (__DIR__ . '/includes/header.php');
 							<img src="<?=$domain?>/icons/FLECHE DROITE BLEUE.svg" alt="">
 						</div>
 					</div>
-					
+					<img src="<?=$domain?>/icons/FLECHE BAS BLEUE.svg" alt="">
 				</div>
 				<div class="forum-filters-container">
 					<h1>Mes filtres</h1>
@@ -134,10 +134,13 @@ require_once (__DIR__ . '/includes/header.php');
 						<button class="inactive-filter"></button>
 						<h2>Informations</h2>
 					</div>
-
 				</div>
 			</div>
-			<div class="forum-bottom"></div>
+			<div class="forum-bottom">
+				<h1>Vous ne trouvez pas votre bonheur sur le forum ?</h1>
+				<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum est eligendi enim animi perspiciatis, quae error officia magni illo? Dolores.</p>
+				<a href="<?=$domain?>/../contact.php"><button>Nous contacter</button></a>
+			</div>
 		</div>
 	</div>
 </section>
