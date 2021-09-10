@@ -1,0 +1,1376 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+    
+html {
+	scroll-behavior: smooth;
+	height:100%;
+}
+
+:root {
+	--red: #e8491c;
+}
+
+body {
+	width: 100%;
+	overflow-x: hidden;
+	margin: 0;
+	font-family: "Poppins", sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	height:100%;
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+p {
+	line-height: 1.6em;
+}
+
+button, input, select, option, textarea {
+	font-family: "Poppins", sans-serif;
+}
+
+
+/* ================================
+
+		  STYLES GENERALES
+
+================================== */
+
+
+.container {
+	width: 85%;
+	max-width: 1450px;
+	background-color: transparent;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+
+
+
+
+/* ================================
+
+			  FOOTER
+
+================================== */
+
+
+
+footer {
+	width: 100%;
+	background-color: #383c3e;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: column;
+}
+
+footer a {
+	color: white;
+	font-weight: 200;
+}
+
+.foot-cols {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	padding: 50px 0;
+	color: white;
+}
+
+.ft-col {
+	width: 22%;
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+	flex-flow: column;
+	text-align: left;
+}
+
+.ft-col > img {
+	width: 250px;
+}
+
+.ft-col p {
+	margin: 30px 0;
+	font-size: .8em;
+	font-weight: 200;
+}
+
+.ft-col p span {
+	font-weight: 500;
+}
+
+.ft-col ul li {
+	margin: 10px 0;
+}
+
+.ft-col h3 {
+	font-weight: 500;
+}
+
+.ft-col:nth-child(2) ul li:last-child a {
+	font-weight: 600;
+}
+
+.ft-col:last-child p {
+	font-size: 1em;
+}
+
+.ft-icons {
+	width: 80%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.foot-footer {
+	width: 100%;
+	border-top: 1px solid var(--red);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 20px 0;
+}
+
+.footer-links {
+	width: 80%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.ft-col form {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: column;
+}
+
+.ft-col form input {
+	width: 100%;
+	border: none;
+	border-radius: 50px;
+	text-align: center;
+	padding: 10px;
+	margin-bottom: 10px;
+	font-size: 1.1em;
+}
+
+.ft-col form input::placeholder {
+	opacity: .4;
+}
+
+.ft-col form button {
+	width: 130px;
+	background-color: #e8491c;
+	color: white;
+	padding: 8px 15px;
+	border-radius: 50px;
+	border: none;
+	font-size: 1em;
+	font-weight: 200;
+	cursor: pointer;
+}
+
+/* ================================
+
+			  HEADER
+
+================================== */
+
+header {
+	background-color: #E8491C;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 10px 0;
+}
+
+.header-main {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.header-main a {
+	color: white;
+	font-weight: 300;
+	font-size: 1em;
+}
+
+.header-info {
+	width: 70%;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.info-a, .info-b {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.info-b {
+	margin-left: 100px;
+}
+
+.info-a img, .info-b img {
+	width: 30px;
+}
+
+.info-a a, .info-b a {
+	margin-left: 10px;
+}
+
+.user-icon img {
+	width: 26px;
+}
+
+
+/* ================================
+
+			  NAVBAR
+
+================================== */
+
+
+.navbar {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.nav {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 15px 0;
+}
+
+.logo {
+	width: 22%;
+}
+
+.navlinks {
+	width: 70%;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.navlist {
+	width: 85%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.navlist a {
+	color: black;
+	font-size: 1.05em;
+}
+
+.home-icon {
+	fill: #e8491c;
+}
+
+.logo img {
+	width: 100%;
+}
+
+
+
+/* ================================
+
+			  ACCUEIL
+
+================================== */
+
+#home {
+	width: 100%;
+	height: 680px;
+	background-color: #cdb158;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	z-index: 5;
+}
+
+.home-bg {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	position: relative;
+	z-index: 10;
+	background-image: url('../img/people/lively-surprised-happy-cheerful-smiling-happy-girl-long-curly-haircut-grinning-toothy-white-perfect-grin-point-index-finger-left-sideways-discuss-new-furniture-move-appartment-show-friends.png');
+	background-position: 100px -90px;
+	background-repeat: no-repeat;
+	background-size: 103%;
+}
+
+#home > img:nth-child(1) {
+	z-index: 11;
+	position: absolute;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+	bottom: -80px;
+	text-align: center;
+}
+
+#home > img:nth-child(2) {
+	position: absolute;
+	width: 120px;
+	margin-left: auto;
+	margin-right: auto;
+	left: 46px;
+	right: 0;
+	bottom: -108px;
+	transform: rotate(90deg);
+	text-align: center;
+	z-index: -2;
+}
+
+.home-container {
+	width: 100%;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	position: relative;
+	z-index: 3;
+}
+
+.home-text {
+	width: 50%;
+	text-align: center;
+}
+
+.home-text h2 {
+	color: white;
+	font-weight: 300;
+	font-size: 1.8em;
+	margin: 50px 0;
+}
+
+.home-text span {
+	font-weight: 500;
+}
+
+.home-text h3 {
+	font-size: 1.8em;
+	color: white;
+	font-weight: 500;
+	margin-bottom: 50px;
+}
+
+.home-btns {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: column nowrap;
+	width: 100%;
+}
+
+.home-btns button {
+	width: 420px;
+	background-color: white;
+	color: #f8b037;
+	padding: 15px 15px;
+	border-radius: 50px;
+	border: none;
+	font-size: 1.5em;
+	font-weight: 300;
+	cursor: pointer;
+}
+
+.home-btns a {
+	margin: 15px 0;
+}
+
+/* ================================
+
+			  ABOUT US
+
+================================== */
+
+#about-us {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: column nowrap;
+	margin: 90px 0;
+}
+
+.about-container {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: column;
+}
+
+.about-title h1 {
+	font-family: 'bc-alphapipe',sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 2.2em;
+	margin-left: 20px;
+}
+
+.about-title img {
+	width: 28px;
+}
+
+.about-title {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.video-container {
+	width: 100%;
+	margin: 40px 0;
+}
+
+.video-container video {
+	width: 100%;
+	border-radius: 100px;
+	-webkit-box-shadow: 0px 0px 21px -8px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 0px 21px -8px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 21px -8px rgba(0,0,0,0.75);
+}
+
+
+/* ================================
+
+		  ABOUT US CAROUSEL
+
+================================== */
+
+.video-carousel {
+	background-color: #fffaf2;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 50px 0;
+	margin: 30px 0;
+}
+
+.carousel-container {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.left-btn {
+	width: 10%;
+	order: 1;
+	flex-grow: 1;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.left-btn img {
+	width: 115px;
+	cursor: pointer;
+}
+
+.slider {
+	width: 80%;
+	order: 2;
+	flex-grow: 5;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.right-btn {
+	width: 10%;
+	order: 3;
+	flex-grow: 1;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.right-btn img {
+	width: 115px;
+	cursor: pointer;
+}
+
+.slider-text {
+	width: 60%;
+}
+
+.slider-text h2 {
+	font-size: 1.8em;
+	margin-bottom: 40px;
+}
+
+.slider-text p {
+	font-size: 1.4em;
+}
+
+.slider-img {
+	width: 40%;
+}
+
+.slider-img img {
+	width: 100%;
+}
+
+
+/* ================================
+
+		NOS FORMATIONS - HOME
+
+================================== */
+
+#home-formations {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.formations-accueil {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: column;
+}
+
+.categories-formations {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 240px;
+	margin: 80px 0;
+}
+
+.formations-card-home {
+	width: 400px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: column;
+	text-align: center;
+	border-radius: 50px;
+	position: relative;
+}
+
+.card-img-container {
+	width: 100%;
+	border-radius: 50px;
+	height: 400px;
+	display: flex;
+	justify-content: center;
+	overflow: hidden;
+	text-align: center;
+	margin-bottom: 20px;
+	position: relative;
+	-webkit-box-shadow: 0px 0px 20px -7px rgba(0,0,0,0.65);
+	-moz-box-shadow: 0px 0px 20px -7px rgba(0,0,0,0.65);
+	box-shadow: 0px 0px 20px -7px rgba(0,0,0,0.65);
+}
+
+.formations-card-home:nth-child(1) > img{
+	width: 100px;
+	position: absolute;
+	top: -80px;
+	left: -60px;
+	transform: rotate(230deg);
+	z-index: 1;
+}
+
+.formations-card-home:nth-child(2) > img{
+	width: 100px;
+	position: absolute;
+	bottom: 20px;
+	right: -60px;
+	transform: rotate(60deg);
+	z-index: 1;
+}
+
+.card-img-container img {
+	height: 100%;
+	margin-bottom: 20px;
+	position: relative;
+	z-index: 10;
+}
+
+.formations-card-home a {
+	color: #4259a8;
+	font-size: 1.4em;
+}
+
+.cta-btn-home button {
+	width: 420px;
+	background-color: #e8491c;
+	color: white;
+	padding: 15px 15px;
+	border-radius: 50px;
+	border: none;
+	font-size: 1.5em;
+	font-weight: 200;
+	cursor: pointer;
+}
+
+/* ================================
+
+			 CAROUSEL #2
+
+================================== */
+
+#last-carousel-home {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 100px 0;
+}
+
+.last-carousel-container {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: column;
+}
+
+.carousel-container2 {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 70px 0;
+}
+
+.left-btn2 {
+	width: 10%;
+	order: 1;
+	flex-grow: 1;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.left-btn2 img {
+	width: 115px;
+	cursor: pointer;
+}
+
+.slider2 {
+	width: 55%;
+	order: 2;
+	flex-grow: 5;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.right-btn2 {
+	width: 10%;
+	order: 3;
+	flex-grow: 1;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.right-btn2 img {
+	width: 115px;
+	cursor: pointer;
+}
+
+.slider-card {
+	width: 330px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: column;
+	text-align: center;
+}
+
+.slider-card:nth-child(2) {
+	position: relative;
+}
+
+.slider-card:nth-child(2) > img:nth-child(1) {
+	position: absolute;
+	z-index: 2;
+	bottom: -45px;
+	left: -60px;
+	width: 120px;
+	transform: rotate(150deg);
+}
+
+.slider-card:nth-child(2) > img:nth-child(2) {
+	position: absolute;
+	z-index: 2;
+	top: -110px;
+	right: -60px;
+	width: 120px;
+	transform: rotate(-30deg);
+}
+
+.slider-card-img {
+	width: 100%;
+	height: 350px;
+	display: flex;
+	justify-content: center;
+	border-radius: 50px;
+	overflow: hidden;
+	position: relative;
+	z-index: 1;
+	margin-bottom: 20px;
+	-webkit-box-shadow: 0px 0px 20px -7px rgba(0,0,0,0.65);
+	-moz-box-shadow: 0px 0px 20px -7px rgba(0,0,0,0.65);
+	box-shadow: 0px 0px 20px -7px rgba(0,0,0,0.65);
+}
+
+.relative-img {
+	position: relative;
+	z-index: 7;
+}
+
+.slider-card-img img {
+	height: 100%;
+}
+
+.slider-card a {
+	color: #4259a8;
+	font-size: 1.4em;
+}
+
+.cta-btn-carousel a {
+	margin: 30px 0;
+}
+
+.cta-btn-carousel button {
+	width: 420px;
+	background-color: #e8491c;
+	color: white;
+	padding: 15px 15px;
+	border-radius: 50px;
+	border: none;
+	font-size: 1.5em;
+	font-weight: 200;
+	cursor: pointer;
+}
+
+
+/* ================================
+
+			 SUCCESS
+
+================================== */
+
+#success {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.success-container {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: column;
+	margin: 50px 0;
+}
+
+.success-top {
+	width: 100%;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: column;
+}
+
+.success-top h1 {
+	font-family: bc-alphapipe, sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 2.5em;
+	color: #304798;
+}
+
+.success-top img {
+	width: 250px;
+	margin: 40px 0;
+}
+
+.success-bottom {
+	margin-top: 100px;
+	width: 100%;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: column;
+}
+
+.success-bottom h1 {
+	font-size: 2.5em;
+	font-weight: 300;
+}
+
+.success-bottom h4 {
+	font-size: 1.8em;
+	font-weight: 300;
+}
+
+.success-bottom p {
+	font-size: 1.2em;
+	font-weight: 300;
+}
+
+.success-bottom p a {
+	text-decoration: underline;
+	color: black;
+}
+
+.success-bottom button {
+	width: 420px;
+	background-color: #e8491c;
+	color: white;
+	padding: 15px 15px;
+	border-radius: 50px;
+	border: none;
+	font-size: 1.5em;
+	font-weight: 200;
+	cursor: pointer;
+	margin-top: 20px;
+}
+
+/* ================================
+
+			 ECHEC
+
+================================== */
+
+#echec {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.echec-top {
+	width: 100%;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: column;
+	margin: 50px auto;
+}
+
+.echec-top h1 {
+	font-family: bc-alphapipe, sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 2.5em;
+	color: #304798;
+}
+
+.echec-top img {
+	width: 250px;
+	margin: 40px 0;
+}
+
+.echec-top button {
+	width: 420px;
+	background-color: #e8491c;
+	color: white;
+	padding: 15px 15px;
+	border-radius: 50px;
+	border: none;
+	font-size: 1.5em;
+	font-weight: 200;
+	cursor: pointer;
+	margin: 20px 0;
+}
+
+/* ================================
+
+			  ACCUEIL
+
+================================== */
+
+#devis-header {
+	width: 100%;
+	height: 700px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	z-index: 5;
+}
+
+.devis-bg {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	position: relative;
+	z-index: 10;
+	background-image: url('../img/people/portrait-of-happy-contented-satisfied-attractive-man-in-denim-trendy-shirt-showing-with-his-index-finger-the-top-right-cornerxt.jpg');
+	background-position: 0 -110px;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+#devis-header > img:nth-child(1) {
+	z-index: 11;
+	position: absolute;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+	bottom: -135px;
+	text-align: center;
+	width: 150px;
+}
+
+#devis-header > img:nth-child(2) {
+	position: absolute;
+	width: 120px;
+	margin-left: auto;
+	margin-right: auto;
+	left: 46px;
+	right: 0;
+	bottom: -108px;
+	transform: rotate(90deg);
+	text-align: center;
+	z-index: -2;
+}
+
+.devis-header {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-end;
+}
+
+.devis-text {
+	margin-top: 200px;
+	width: 70%;
+	height: 100%;
+	text-align: left;
+	color: white;
+}
+
+.devis-text h1 {
+	font-weight: 400;
+	margin-bottom: 15px;
+	font-size: 3.5em;
+}
+
+.devis-text p {
+	font-size: 1.5em;
+	font-weight: 300;
+}
+
+#devis-pdf {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 150px 0;
+}
+
+.pdf-container {
+	width: 100%;
+	border-radius: 50px;
+}
+
+.pdf-container object {
+	width: 100%;
+	height: 1130px;
+}
+
+.devis-pdf-container {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: column;
+}
+
+.devis-bottom-text {
+	width: 100%;
+	text-align: center;
+	margin-top: 30px;
+}
+
+.devis-bottom-text h2 {
+	font-size: 1.8em;
+	font-weight: 300;
+}
+
+.devis-bottom-text p {
+	font-size: 1.2em;
+	font-weight: 200;
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+/* ================================
+
+			 FORMATIONS
+
+================================== */
+
+
+#formation-header {
+	width: 100%;
+	height: 700px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	z-index: 5;
+}
+
+.formation-bg {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	position: relative;
+	z-index: 10;
+	background-image: url('../img/people/black-stupefied-young-teacher-keeps-hands-on-head-opens-mouth-widely-stares-at-pile-of-books-prepares-lecture-for-students.jpg');
+	background-position: 0 -650px;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+#formation-header > img:nth-child(1) {
+	z-index: 11;
+	position: absolute;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+	bottom: -135px;
+	text-align: center;
+	width: 150px;
+}
+
+#formation-header > img:nth-child(2) {
+	position: absolute;
+	width: 120px;
+	margin-left: auto;
+	margin-right: auto;
+	left: 46px;
+	right: 0;
+	bottom: -108px;
+	transform: rotate(90deg);
+	text-align: center;
+	z-index: -2;
+}
+
+.formation-header {
+	width: 100%;
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-end;
+}
+
+.formation-text {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-flow: column;
+	color: white;
+}
+
+.formation-text h1 {
+	font-size: 3em;
+	font-weight: 400;
+}
+
+.formation-text p {
+	margin: 150px auto;
+	font-size: 1.8em;
+	font-weight: 300;
+}
+
+.cta-formations-btns {
+	width: 77%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.cta-formations-btns button {
+	width: 500px;
+	background-color: white;
+	color: var(--red);
+	padding: 15px 15px;
+	border-radius: 50px;
+	border: none;
+	font-size: 1.5em;
+	font-weight: 300;
+	cursor: pointer;
+}
+
+/* ================================
+
+			  MON COMPTE
+
+================================== */
+
+#user-header {
+	width: 100%;
+	height: 700px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	z-index: 5;
+}
+
+.user-bg {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	position: relative;
+	z-index: 10;
+	background-image: url('../img/people/front-view-of-male-student-wearing-black-backpack-holding-copybooks-and-files-on-blue-wall.jpg');
+	background-position: 0 -135px;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+#user-header > img:nth-child(1) {
+	z-index: 11;
+	position: absolute;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+	bottom: -135px;
+	text-align: center;
+	width: 150px;
+}
+
+#user-header > img:nth-child(2) {
+	position: absolute;
+	width: 120px;
+	margin-left: auto;
+	margin-right: auto;
+	left: 46px;
+	right: 0;
+	bottom: -108px;
+	transform: rotate(90deg);
+	text-align: center;
+	z-index: -2;
+}
+
+.user-header {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+.user-text {
+	width: 80%;
+	color: white;
+}
+
+.user-text h1 {
+	font-size: 4.5em;
+	margin-bottom: 350px;
+	font-weight: 500;
+}
+
+.user-text p {
+	font-size: 1.8em;
+}
+
+#user-body {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 150px auto;
+}
+
+.user-container {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.user-profile {
+	width: 30%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: column;
+	position: relative;
+	height: 750px;
+}
+
+.user-messages {
+	width: 65%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.user-details {
+	width: 100%;
+	align-self: flex-start;
+	justify-self: flex-start;
+}
+
+.user-details h2 {
+	align-self: center;
+	justify-self: center;
+	text-align: center;
+	font-weight: 300;
+	margin-bottom: 10px;
+	font-size: 2.2em;
+}
+
+.user-details ul {
+	margin-bottom: 50px;
+	font-size: 1.3em;
+	font-weight: 300;
+}
+
+.user-details p {
+	font-size: 1.3em;
+	font-weight: 300;
+}
+
+.user-details button {
+	width: 100%;
+	background-color: var(--red);
+	color: white;
+	padding: 5px;
+	border-radius: 50px;
+	border: none;
+	font-size: 1.7em;
+	font-weight: 200;
+	cursor: pointer;
+}
+
+.user-img {
+	width: 90%;
+	border-radius: 70px;
+	display: flex;
+	justify-content: center;
+	overflow: hidden;
+	margin-bottom: 40px;
+	position: relative;
+}
+
+.user-profile > img {
+	position: absolute;
+	right: 10px;
+	top: -50px;
+	width: 110px;
+	transform: rotate(-45deg);
+	z-index: 2;
+}
+
+.user-img img {
+	width: 100%;
+	position: relative;
+	z-index: 3;
+}
+
+.message-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-flow: column;
+	width: 100%;
+	height: 750px;
+	padding: 20px;
+	padding-bottom: 30px;
+	border-radius: 60px;
+	background-color: white;
+	-webkit-box-shadow: 0px 0px 23px -13px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 0px 23px -13px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 23px -13px rgba(0,0,0,0.75);
+}
+
+.messages-header {
+	width: 90%;
+	padding: 5px;
+	text-align: center;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.329);
+}
+
+.messages-header h1 {
+	font-weight: 300;
+	font-size: 2.2em;
+}
+
+.reception {
+	width: 100%;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	flex-flow: column;
+}
+
+.reception img {
+	width: 300px;
+}
+
+.reception h4 {
+	font-weight: 300;
+	font-size: 1.7em;
+	margin-bottom: 50px;
+}
