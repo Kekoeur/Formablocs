@@ -13,6 +13,7 @@ html {
 
 :root {
 	--red: #e8491c;
+	--blue: #2c68b0;
 }
 
 body {
@@ -242,8 +243,9 @@ header {
 	margin-left: 10px;
 }
 
-.user-icon img {
-	width: 26px;
+.right-icons img {
+	width: 28px;
+	margin-left: 15px;
 }
 
 
@@ -1373,4 +1375,376 @@ header {
 	font-weight: 300;
 	font-size: 1.7em;
 	margin-bottom: 50px;
+}
+
+/* ================================
+
+			   FORUM
+
+================================== */
+
+#forum-header {
+	width: 100%;
+	height: 700px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	z-index: 5;
+}
+
+.forum-bg {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	position: relative;
+	z-index: 10;
+	background-image: url('../img/people/cheerful-guy-whispers-secret-to-girlfriend-shares-gossip-have-fun-after-classes-excited-curly-haired-female-holds-cell-phone-gets-interesting-information-from-groupmate-two-students-discuss-something.jpg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+#forum-header > img:nth-child(1) {
+	z-index: 11;
+	position: absolute;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+	bottom: -135px;
+	text-align: center;
+	width: 150px;
+}
+
+#forum-header > img:nth-child(2) {
+	position: absolute;
+	width: 120px;
+	margin-left: auto;
+	margin-right: auto;
+	left: 46px;
+	right: 0;
+	bottom: -108px;
+	transform: rotate(90deg);
+	text-align: center;
+	z-index: -2;
+}
+
+.forum-header {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+.forum-text {
+	width: 80%;
+	color: white;
+}
+
+.forum-text h1 {
+	font-size: 4.5em;
+	margin-bottom: 270px;
+	font-weight: 500;
+}
+
+.forum-text p {
+	font-size: 1.7em;
+	font-weight: 200;
+}
+
+#forum-body {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 100px auto;
+}
+
+.forum-wrapper {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: column;
+}
+
+.forum-search {
+	width: 100%;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.search-form {
+	margin-top: 30px;
+	width: 600px;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.search-form button {
+	position: absolute;
+	right: 0;
+	top: 0;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #2c68b0;
+	color: white;
+	border: none;
+	padding: 14px;
+	font-size: 1.8em;
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+.search-form input {
+	width: 100%;
+	padding: 10px 25px;
+	padding-right: 70px;
+	font-size: 1.5em;
+	border: none;
+	border-radius: 40px;
+	-webkit-box-shadow: 0px 0px 25px -14px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 0px 25px -14px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 25px -14px rgba(0,0,0,0.75);
+	outline: none;
+}
+
+.search-form input::placeholder {
+	opacity: .5;
+}
+
+.forum-top {
+	width: 100%;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	margin-top: 80px;
+	margin-bottom: 60px;
+}
+
+.dropdown-el {
+	min-width: 230px;
+	position: relative;
+	display: inline-block;
+	margin-right: 1em;
+	min-height: 2em;
+	max-height: 2em;
+	overflow: hidden;
+	top: 0.5em;
+	cursor: pointer;
+	text-align: left;
+	white-space: nowrap;
+	color: #444;
+	outline: none;
+	border: 0.06em solid transparent;
+	border-radius: 1em;
+	background-color: white;
+	font-size: 1.3em;
+	transition: 0.3s all ease-in-out;
+	-webkit-box-shadow: 0px 0px 25px -14px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 0px 25px -14px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 25px -14px rgba(0,0,0,0.75);
+}
+
+.dropdown-el input:focus + label {
+	background: #def;
+}
+  
+.dropdown-el input {
+	width: 1px;
+	height: 1px;
+	display: inline-block;
+	position: absolute;
+	opacity: 1;
+}
+  
+.dropdown-el label {
+	border-top: 0.06em solid #d9d9d9;
+	display: block;
+	height: 2em;
+	line-height: 2em;
+	padding-left: 1em;
+	padding-right: 3em;
+	cursor: pointer;
+	position: relative;
+	transition: 0.3s color ease-in-out;
+}
+
+.dropdown-el label:nth-child(2) {
+	margin-top: 2em;
+	border-top: 0.06em solid #d9d9d9;
+}
+
+.dropdown-el input:checked + label {
+	display: block;
+	border-top: none;
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+
+.dropdown-el input:checked + label:nth-child(2) {
+	margin-top: 0;
+	position: relative;
+}
+
+.dropdown-el::after {
+	font-family: 'Font Awesome 5 Free';
+	font-weight: 900;
+	content: "\f078";
+	position: absolute;
+	z-index: 5;
+	right: 10px;
+	top: 10px;
+	color: var(--blue);
+	transition: 0.4s all ease-in-out;
+}
+
+.dropdown-el.expanded {
+	border: 0.06em solid var(--blue);
+	background: #fff;
+	border-radius: 0.25em;
+	padding: 0;
+	box-shadow: rgba(0, 0, 0, 0.1) 3px 3px 5px 0px;
+	max-height: 15em;
+}
+
+.dropdown-el.expanded label {
+	border-top: 0.06em solid #d9d9d9;
+}
+
+.dropdown-el.expanded label:hover {
+	color: var(--blue);
+}
+
+.dropdown-el.expanded input:checked + label {
+	color: var(--blue);
+}
+
+.dropdown-el.expanded::after {
+	transform: rotate(-180deg);
+	top: 0.55em;
+}
+
+.low-opacity {
+	opacity: .5;
+}
+
+.forum-messages {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.forum-messages-container {
+	width: 66%;
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+	flex-flow: column;
+}
+
+.forum-message {
+	width: 100%;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	margin-bottom: 70px;
+}
+
+.forum-user-img {
+	margin-right: 25px;
+	border-radius: 50%;
+	height: 100px;
+	width: 100px;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+}
+
+.forum-user-img img {
+	width: 100%;
+}
+
+.forum-user-message {
+	width: 800px;
+	position: relative;
+	padding: 15px 40px;
+	border-radius: 80px;
+	-webkit-box-shadow: 0px 0px 28px -15px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 0px 28px -15px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 28px -15px rgba(0,0,0,0.75);
+}
+
+.forum-user-message h3 {
+	font-weight: 500;
+	font-size: 1.5em;
+	color: rgba(0, 0, 0, 0.7);
+}
+
+.forum-user-message p {
+	font-weight: 200;
+	font-size: 1.2em;
+}
+
+.forum-user-message img {
+	position: absolute;
+	right: -40px;
+	top: 17px;
+	width: 90px;
+	cursor: pointer;
+}
+
+.forum-filters-container {
+	width: 30%;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	flex-flow: column;
+	text-align: right;
+}
+
+.forum-filters-container h1 {
+	text-align: right;
+	font-size: 2.2em;
+	color: rgba(0, 0, 0, 0.542);
+	padding-bottom: 20px;
+	font-weight: 300;
+	width: 100%;
+	border-bottom: 2px solid rgba(17, 17, 17, 0.241);
+	margin-bottom: 40px;
+}
+
+.filter {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 25px;
+	cursor: pointer;
+}
+
+.filter button {
+	width: 35px;
+	height: 35px;
+	background-color: var(--blue);
+	border-radius: 50%;
+	border: none;
+	cursor: pointer;
+}
+
+.filter h2 {
+	font-weight: 300;
+	font-size: 1.5em;
+	color: rgba(0, 0, 0, 0.618);
 }
