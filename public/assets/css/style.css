@@ -312,8 +312,6 @@ header {
 
 #home {
 	width: 100%;
-	height: 680px;
-	background-color: #cdb158;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -322,41 +320,48 @@ header {
 }
 
 .home-bg {
-	display: flex;
-	justify-content: center;
-	align-items: center;
 	width: 100%;
-	height: 100%;
 	position: relative;
 	z-index: 10;
-	background-image: url('../img/people/lively-surprised-happy-cheerful-smiling-happy-girl-long-curly-haircut-grinning-toothy-white-perfect-grin-point-index-finger-left-sideways-discuss-new-furniture-move-appartment-show-friends.png');
-	background-position: 100px -90px;
-	background-repeat: no-repeat;
-	background-size: 103%;
+	max-width: 1920px;
 }
 
-#home > img:nth-child(1) {
+.home-bg > a {
+	width: 100%;
+	position: relative;
+}
+
+.home-bg > a img {
+	width: 100%;
+	position: relative;
+	z-index: 8;
+}
+
+.home-bg a::after {
+	content: url('../icons/FLECHE\ BAS\ BLEUE.svg');
 	z-index: 11;
+	width: 80px;
 	position: absolute;
 	margin-left: auto;
 	margin-right: auto;
 	left: 0;
 	right: 0;
-	bottom: -80px;
+	bottom: -40px;
 	text-align: center;
 }
 
-#home > img:nth-child(2) {
+.home-bg a::before {
+	content: url('../icons/ROND\ ORANGE.svg');
 	position: absolute;
 	width: 120px;
 	margin-left: auto;
 	margin-right: auto;
-	left: 46px;
+	left: 40px;
 	right: 0;
-	bottom: -108px;
+	bottom: -110px;
 	transform: rotate(90deg);
 	text-align: center;
-	z-index: -2;
+	z-index: 5;
 }
 
 .home-container {
@@ -368,41 +373,24 @@ header {
 	z-index: 3;
 }
 
-.home-text {
-	width: 50%;
-	text-align: center;
-}
-
-.home-text h2 {
-	color: white;
-	font-weight: 300;
-	font-size: 1.8em;
-	margin: 50px 0;
-}
-
-.home-text span {
-	font-weight: 500;
-}
-
-.home-text h3 {
-	font-size: 1.8em;
-	color: white;
-	font-weight: 500;
-	margin-bottom: 50px;
+#home-ctas {
+	margin-top: 130px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .home-btns {
 	display: flex;
-	justify-content: center;
+	justify-content: space-between;
 	align-items: center;
-	flex-flow: column nowrap;
 	width: 100%;
 }
 
 .home-btns button {
 	width: 420px;
-	background-color: white;
-	color: #f8b037;
+	background-color: var(--blue);
+	color: white;
 	padding: 15px 15px;
 	border-radius: 50px;
 	border: none;
@@ -482,7 +470,7 @@ header {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	padding: 50px 0;
+	padding: 0;
 	margin: 30px 0;
 }
 
@@ -491,24 +479,12 @@ header {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-}
-
-.left-btn {
-	width: 10%;
-	order: 1;
-	flex-grow: 1;
-	display: flex;
-	justify-content: flex-start;
-	align-items: center;
-}
-
-.left-btn img {
-	width: 115px;
-	cursor: pointer;
+	position: relative;
 }
 
 .slider {
 	width: 80%;
+	padding: 80px;
 	order: 2;
 	flex-grow: 5;
 	display: flex;
@@ -516,19 +492,10 @@ header {
 	align-items: center;
 }
 
-.right-btn {
-	width: 10%;
-	order: 3;
-	flex-grow: 1;
-	display: flex;
-	justify-content: flex-end;
-	align-items: center;
+.splide__arrow > img {
+	width: 130px;
 }
 
-.right-btn img {
-	width: 115px;
-	cursor: pointer;
-}
 
 .slider-text {
 	width: 60%;
