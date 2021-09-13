@@ -29,18 +29,9 @@ require_once (__DIR__ . '/../includes/header.php');
 
 ?>
 
-<section id="devis-header">
-	<img src="<?=$domain?>/icons/FLECHE BAS BLEUE.svg" alt="">
-	<img src="<?=$domain?>/icons/ROND ORANGE.svg" alt="">
-	<div class="devis-bg">
-		<div class="container">
-			<div class="devis-header">
-				<div class="devis-text">
-					<h1>Obtenez votre devis</h1>
-					<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis tenetur nulla repudiandae excepturi labore voluptatibus amet iure, facilis corrupti laudantium laboriosam minima eligendi quam libero.</p>
-				</div>
-			</div>
-		</div>
+<section id="home">
+	<div class="home-bg">
+		<a href="#"><img src="<?=$domain?>/img/banners/Profil_ 1980x714 px.png" alt=""></a>
 	</div>
 </section>
 

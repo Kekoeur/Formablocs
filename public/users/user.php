@@ -34,18 +34,9 @@ require_once (__DIR__ . '/../includes/header.php');
 
 ?>
 
-<section id="user-header">
-	<img src="<?=$domain?>/icons/FLECHE BAS BLEUE.svg" alt="">
-	<img src="<?=$domain?>/icons/ROND ORANGE.svg" alt="">
-	<div class="user-bg">
-		<div class="container">
-			<div class="user-header">
-				<div class="user-text">
-					<h1>Bienvenue sur votre profil !</h1>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate magnam modi, sint ipsa explicabo aliquid aperiam obcaecati expedita placeat soluta dolores officia maiores animi illum similique porro dolorum.</p>
-				</div>
-			</div>
-		</div>
+<section id="home">
+	<div class="home-bg">
+		<a href="#"><img src="<?=$domain?>/img/banners/Profil_ 1980x714 px.png" alt=""></a>
 	</div>
 </section>
 
@@ -75,7 +66,7 @@ require_once (__DIR__ . '/../includes/header.php');
 					</div>
 					<div class="reception">
 						<h4>Votre boîte de réception est vide</h4>
-						<img src="<?=$domain?>/illustrations/ILLUSTRATION ACCUEIL CARROUSEL.svg" alt="">
+						<img src="<?=$domain?>/illustrations/PROFIL ILLUSTRATION.svg" alt="">
 					</div>
 				</div>
 			</div>
@@ -96,9 +87,9 @@ require_once (__DIR__ . '/../includes/header.php');
 							<h3><?=$formation?></h3>
 							<p>Commencée le : <?=$dateOnly?></p>
 						</div>
-						<div class="mes-formations-card-picto">
-							<img src="<?=$domain?>/icons/<?=$picto?>" alt="">
-						</div>
+<!-- 					<div class="mes-formations-card-picto">
+							<img src="/icons/" alt="">
+						</div> -->
 					</div>
 
 				<?php } ?>
