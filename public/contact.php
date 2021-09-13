@@ -90,7 +90,7 @@ require_once (__DIR__ . '/includes/header.php');
             }
         }
         
-        echo json_encode($array);
+        //echo json_encode($array);
         
     }
 
