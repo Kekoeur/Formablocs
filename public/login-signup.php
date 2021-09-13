@@ -16,6 +16,7 @@ require_once (__DIR__ . '/includes/header.php');
         
         $username = $_POST['login-username'];
         $password = $_POST['login-password'];
+        echo $username, $password;
         if(empty($username) || empty($password)){
             echo "<p class=\"comments\">Veuillez remplir tout les champs</p>";
         }else{
@@ -26,7 +27,7 @@ require_once (__DIR__ . '/includes/header.php');
                 //L'User est enregistré
                 $db_username = $user['username'];
                 $db_password = $user['passw'];
-
+                echo $db_username, $db_password;
                 //Vérifier si le Password correspond
                 if(password_verify($password, $db_password)){
                     $_SESSION['user_id'] = $user['id'];
@@ -69,26 +70,17 @@ require_once (__DIR__ . '/includes/header.php');
         <div class="row">
             <div class="col-md-12 input">
               <label for="login-username">Nom d'utilisateur</label>
-              <img src="<?=$domain?>assets/icons/USER.svg" alt="">
+              <img src="<?=$domain?>/icons/USER ORANGE.svg" alt="">
               <input id="login-username" type="text" name="login-username" placeholder="Entrez votre nom d'utilisateur">
             </div>
             <div class="col-md-12 input">
               <label for="login-password-id">Mot de passe</label>
-              <img src="<?=$domain?>assets/icons/CADENAS MDP.svg" alt="">
+              <img src="<?=$domain?>/icons/CADENAS MDP.svg" alt="">
               <input id="login-password-id" type="password" name="login-password" class="form-control" placeholder="Entrez votre mot de passe">
             </div>
         </div>
         <div class="col-md-12">
           <p>Mot de passe oublié ? Cliquez <a id="open_modal" href="#modal">ici</a></p>
-        </div>
-        <div id="modal" class="modal">
-          <div class="modal_content">
-            <h1>Hello</h1>
-
-            <p>Bienvenue sur la fenêtre modale !</p>
-
-            <a href="#" class="modal_close">&times;</a>
-          </div>
         </div>
         <div class="col-md-12 input">
           <button class="btn" id="submit-login_btn" type="submit" name="submit_login">Me connecter</button>
@@ -97,11 +89,51 @@ require_once (__DIR__ . '/includes/header.php');
           <p>Vous n'avez pas encore de compte ?</p>
         </div>
         <div class="col-md-12">
-          <img src="../assets/icons/FLECHE BAS BLEUE.svg" alt="">
+          <img src="<?=$domain?>/icons/FLECHE BAS BLEUE.svg" alt="">
         </div>
       </form>
     </div>
   </section>
+<?php
+  if(isset($_POST['submit_recovery'])){
+      $email = $_POST['recovery_email'];
+      $stm = $pdo->query("SELECT * FROM customers WHERE email=\"$email\"");
+      $user = $stm->fetch(PDO::FETCH_ASSOC);
+      if(!empty($user)){
+        function generateRandomString($length = 10) {
+            return substr(str_shuffle(str_repeat($x='0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ', ceil($length/strlen($x)) )),1,$length);
+        }
+        $new_password = generateRandomString();
+        echo $new_password;
+        $new_password_hash = password_hash($new_password, PASSWORD_BCRYPT);
+        $run_register_query= $pdo->query("UPDATE customers SET passw = \"$new_password_hash\" WHERE email=\"$email\"");
+        $headers = "From: Formablocs - Site de formation <contact@formablocs.com>\r\nReply-To: contact@formablocs.com";
+        if(mail($email, "Votre nouveau mot de passe", "Voici votre nouveau mot de passe {$new_password}", $headers)){
+          echo "<p class=\"comments\">Votre nouveau mot de passe a été envoyé sur votre adresse email.</p>";
+        }else{
+          echo "<p class=\"comments\">Erreur lors de l'envoie de l'email avec le nouveau mot de passe.</p>";
+        }
+      }else{
+          echo "<p class=\"comments\">Cette adresse email n'existe pas. Veuillez reéssayer</p>";
+      }
+    }
+?>
+  <div id="modal" class="modal">
+    <div class="modal_content">
+      <h1>Récupération du mot de passe</h1>
+      <form action="" method="POST">
+        <div>
+          <label for="recovery_email">Votre adresse email</label>
+          <input id="recovery_email" type="text" name="recovery_email" placeholder="Entrez votre adresse email">
+        </div>
+        <div class="input">
+          <button class="btn" id="submit_recovery" type="submit" name="submit_recovery"><a href="">Récupérer mon mot de passe</a></button>
+        </div>
+      </form>
+
+      <a href="" class="modal_close">&times;</a>
+    </div>
+  </div>
 <?php
 
 require_once (__DIR__ . '/db/global_db.php');
@@ -122,7 +154,6 @@ if(isset($_POST['submit_signup'])){
 	$email = $_POST['email'];
 	$password = $_POST['password'];
     $confirmPassword = $_POST['confirmPassword'];
-    echo $name, $username, $email, $password, $confirmPassword;
 	
 // ================= Si les champs sont vides, ou mdp differents
 	if(empty($name) || empty($username) || empty($email) || empty($password) || empty($confirmPassword)){
@@ -140,7 +171,7 @@ if(isset($_POST['submit_signup'])){
 			} else {
 				$run_query = $pdo->prepare("SELECT * FROM customers WHERE username = ?");
 				$run_query->bindValue(1,$username);
-                $run_query->execute();
+        $run_query->execute();
 
 				if($run_query->rowCount() > 0 ){
 				echo "<p class=\"comments\">Le nom d'utilisateur est déja enregistrer</p>";
@@ -154,13 +185,13 @@ if(isset($_POST['submit_signup'])){
 
 					$customerStripeID = $newCustomer->id;
 
-                    $run_register_query= $pdo->query("INSERT INTO customers (name, username, email, passw, stripe_id) VALUES (\"$name\", \"$username\", \"$email\", \"$passHash\", \"$customerStripeID\")");
+          $run_register_query= $pdo->query("INSERT INTO customers (name, username, email, passw, stripe_id) VALUES (\"$name\", \"$username\", \"$email\", \"$passHash\", \"$customerStripeID\")");
 					if($run_register_query){
 						$user = $pdo->query("SELECT * FROM customers WHERE stripe_id='". $customerStripeID . "'");
 						$loggedIn = $user->fetch(PDO::FETCH_ASSOC);
 
 						$_SESSION['user_id'] = $loggedIn['id'];
-						header("Location: ../index.php");
+						header("Location: /index.php");
 					} else {
 						echo "<p class=\"comments\">ERROR! Impossible de vous enregistrer maintenant, veuillez reéssayer</p>";
 					}
