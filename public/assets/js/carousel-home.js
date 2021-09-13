@@ -34,19 +34,19 @@ prevTwo.addEventListener('click', () => {
 function updateSlidePosition() {
 	for(let slide of slides){
 		slide.classList.remove('current-home-carousel');
-		slide.classList.add('hidden-slide')
+		slide.classList.add('.hidden-home-slide')
 	}
 	slides[slidePosition].classList.add('current-home-carousel');
-	slides[slidePosition].classList.remove('hidden-slide');
+	slides[slidePosition].classList.remove('.hidden-home-slide');
 }
 
 function updateSlidePosition2() {
 	for(let slide of slides2){
-		slide.classList.remove('current-home-carousel');
-		slide.classList.add('hidden-slide')
+		slide.classList.remove('current-home2-carousel');
+		slide.classList.add('.hidden-home2-slide')
 	}
-	slides2[slidePosition2].classList.add('current-home-carousel');
-	slides2[slidePosition2].classList.remove('hidden-slide');
+	slides2[slidePosition2].classList.add('current-home2-carousel');
+	slides2[slidePosition2].classList.remove('.hidden-home2-slide');
 }
 
 

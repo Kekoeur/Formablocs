@@ -21,12 +21,9 @@ require_once (__DIR__ . '../../db/global_db.php');
 	<!-- ================= CSS ================= -->
 	<link rel="stylesheet" href="<?=$domain?>/css/style.css">
 	<link rel="stylesheet" href="https://use.typekit.net/afv1gmg.css">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
-
 
 	<!-- ================ SCRIPTS ================ -->
 	<script src="https://kit.fontawesome.com/babf6c6ed5.js" crossorigin="anonymous"></script>
-	<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
 
 </head>
 <body>

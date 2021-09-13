@@ -35,7 +35,6 @@
 					<li><a href="<?=$domain?>/../prestations.php">Nos prestations de conseil</a></li>
 					<li><a href="<?=$domain?>/../financement.php">Financement</a></li>
 					<li><a href="<?=$domain?>/../contact.php">Contact</a></li>
-					<li><a href="<?=$domain?>/../formations.php">Devis</a></li>
 					<li><a href="<?=$domain?>/../forum.php">Forum</a></li>
 				</ul>
 			</div>
