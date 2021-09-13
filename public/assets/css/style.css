@@ -1851,11 +1851,6 @@ header {
 
 #open_modal {
     text-decoration: none;
-    padding: 15px;
-    background-color: white;
-    border-radius: 5px;
-    text-transform: uppercase;
-    color: black;
 }
 .modal {
     visibility: hidden;
