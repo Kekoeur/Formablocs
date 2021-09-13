@@ -14,12 +14,13 @@ if(isset($_POST['submit'])){
 	
 // ================= Récuperer les valeurs des differents champs de notre formulaire
 	$name =  $_POST['name'];
+	$username =  $_POST['username'];
 	$email = $_POST['email'];
 	$password = $_POST['password'];
 	$confirmPassword = $_POST['confirmPassword'];
 	
 // ================= Si les champs sont vides, ou mdp differents
-	if(empty($name) || empty($email) || empty($password) || empty($confirmPassword)){
+	if(empty($name) || empty($username) || empty($email) || empty($password) || empty($confirmPassword)){
 		echo "<p class=\"comments\">Veuillez remplir tout les champs du formulaire</p>";
 	} else {
 		if($password !== $confirmPassword){
@@ -30,28 +31,36 @@ if(isset($_POST['submit'])){
 			$run_query->execute();
 
 			if($run_query->rowCount() > 0 ){
-				echo "<p class=\"comments\">L'utilisateur est déja enregistrer</p>";
-			} else { // ================= Sinon l'enregister
-				$passHash = password_hash($_POST['password'], PASSWORD_BCRYPT);
+				echo "<p class=\"comments\">L'adresse e-mail est déja enregistrer</p>";
+			} else {
+				$run_query = $pdo->prepare("SELECT * FROM customers WHERE username = ?");
+				$run_query->bindValue(1,$username);
+				$run_query->execute();
 
-				$newCustomer = $stripe->customers->create([
-					"email" => $email,
-					"name" => $name,
-				]);
+				if($run_query->rowCount() > 0 ){
+				echo "<p class=\"comments\">Le nom d'utilisateur est déja enregistrer</p>";
+				} else { // ================= Sinon l'enregister
+					$passHash = password_hash($_POST['password'], PASSWORD_BCRYPT);
 
-				$customerStripeID = $newCustomer->id;
+					$newCustomer = $stripe->customers->create([
+						"email" => $email,
+						"name" => $name,
+					]);
 
-				$run_register_query= $pdo->query("INSERT INTO customers (name, email, passw, stripe_id) VALUES ('$name', '$email', '$passHash', '$customerStripeID')");
-				if($run_register_query){
-					$user = $pdo->query("SELECT * FROM customers WHERE stripe_id='". $customerStripeID . "'");
-					$loggedIn = $user->fetch(PDO::FETCH_ASSOC);
+					$customerStripeID = $newCustomer->id;
 
-					$_SESSION['user_id'] = $loggedIn['id'];
-					header("Location: ../index.php");
-				} else {
-					echo "<p class=\"comments\">ERROR! Impossible de vous enregistrer maintenant, veuillez reéssayer</p>";
+					$run_register_query= $pdo->query("INSERT INTO customers (name, email, passw, stripe_id) VALUES ('$name', '$email', '$passHash', '$customerStripeID')");
+					if($run_register_query){
+						$user = $pdo->query("SELECT * FROM customers WHERE stripe_id='". $customerStripeID . "'");
+						$loggedIn = $user->fetch(PDO::FETCH_ASSOC);
+
+						$_SESSION['user_id'] = $loggedIn['id'];
+						header("Location: ../index.php");
+					} else {
+						echo "<p class=\"comments\">ERROR! Impossible de vous enregistrer maintenant, veuillez reéssayer</p>";
+					}
+					
 				}
-				
 			}
 		}
 	}
