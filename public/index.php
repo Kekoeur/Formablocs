@@ -125,34 +125,46 @@ require_once (__DIR__ . '/includes/header.php');
 				<h1>Nos prestations de conseil</h1>
 			</div>
 			<div class="carousel-container2">
-				<div class="left-btn2">
-					<img src="assets/icons/FLECHE GAUCHE BLEUE.svg" alt="">
-				</div>
-				<div class="slider2">
-					<div class="slider-card">
-						<div class="slider-card-img">
-							<img src="assets/img/people/aerial-view-hands-working-computer-white-table-office.jpg" alt="">
-						</div>
-						<a href="#">Digitalisation</a>
+
+				<div class="splide2">
+					<div class="splide__arrows">
+						<button class="splide__arrow splide__arrow--prev">
+							<img src="assets/icons/FLECHE GAUCHE BLEUE.svg" alt="">
+						</button>
+						<button class="splide__arrow splide__arrow--next">
+							<img src="assets/icons/FLECHE DROITE BLEUE.svg" alt="">
+						</button>
 					</div>
-					<div class="slider-card">
-						<img src="assets/icons/ROND ORANGE.svg" alt="">
-						<img src="assets/icons/ROND ORANGE.svg" alt="">
-						<div class="slider-card-img relative-img">
-							<img src="assets/img/people/christina-wocintechchat-com-4PU-OC8sW98-unsplash.jpg" alt="">
+					<div class="splide__track">
+						<div class="splide__list">
+
+							<div class="slider-card splide__slide">
+								<div class="slider-card-img">
+									<img src="assets/img/people/aerial-view-hands-working-computer-white-table-office.jpg" alt="">
+								</div>
+								<a href="#">Digitalisation</a>
+							</div>
+
+							<div class="slider-card splide__slide">
+								<img src="assets/icons/ROND ORANGE.svg" alt="">
+								<img src="assets/icons/ROND ORANGE.svg" alt="">
+								<div class="slider-card-img relative-img">
+									<img src="assets/img/people/christina-wocintechchat-com-4PU-OC8sW98-unsplash.jpg" alt="">
+								</div>
+								<a href="#">Qualité</a>
+							</div>
+
+							<div class="slider-card splide__slide">
+								<div class="slider-card-img">
+									<img src="assets/img/people/christina-wocintechchat-com-eF7HN40WbAQ-unsplash.jpg" alt="">
+								</div>
+								<a href="#">RNCP</a>
+							</div>
+							
 						</div>
-						<a href="#">Qualité</a>
-					</div>
-					<div class="slider-card">
-						<div class="slider-card-img">
-							<img src="assets/img/people/christina-wocintechchat-com-eF7HN40WbAQ-unsplash.jpg" alt="">
-						</div>
-						<a href="#">RNCP</a>
 					</div>
 				</div>
-				<div class="right-btn2">
-					<img src="assets/icons/FLECHE DROITE BLEUE.svg" alt="">
-				</div>
+
 			</div>
 			<div class="cta-btn-carousel">
 				<a href="#"><button>Découvrir nos prestations</button></a>

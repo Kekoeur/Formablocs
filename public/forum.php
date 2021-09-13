@@ -4,16 +4,9 @@ require_once (__DIR__ . '/includes/header.php');
 
 ?>
 
-<section id="forum-header">
-	<img src="<?=$domain?>/icons/FLECHE BAS BLEUE.svg" alt="">
-	<img src="<?=$domain?>/icons/ROND ORANGE.svg" alt="">
-	<div class="forum-bg">
-		<div class="container">
-			<div class="forum-header">
-				<div class="forum-text">
-				</div>
-			</div>
-		</div>
+<section id="home">
+	<div class="home-bg">
+		<a href="#"><img src="<?=$domain?>/img/banners/Forum_ 1980x714 px.png" alt=""></a>
 	</div>
 </section>
 
@@ -22,7 +15,7 @@ require_once (__DIR__ . '/includes/header.php');
 		<div class="forum-wrapper">
 			<div class="forum-search">
 				<form class="search-form" action="#">
-					<input type="text" placeholder="Recherchez des mots-clés">
+					<input type="text" placeholder="Recherchez des mots-clés" required>
 					<button type="submit"><i class="fas fa-search"></i></button>
 				</form>
 			</div>

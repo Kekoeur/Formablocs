@@ -60,7 +60,107 @@ button, input, select, option, textarea {
 }
 
 
+#home {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	/*background-color: #d45999;*/
+	z-index: 5;
+}
 
+.home-bg {
+	width: 100%;
+	position: relative;
+	z-index: 10;
+	max-width: 1920px;
+}
+
+.home-bg > a {
+	width: 100%;
+	position: relative;
+	cursor: default;
+}
+
+.home-bg > a img {
+	width: 100%;
+	position: relative;
+	z-index: 8;
+}
+
+.home-bg a::after {
+	content: url('../icons/FLECHE\ BAS\ BLEUE.svg');
+	z-index: 11;
+	width: 80px;
+	position: absolute;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+	bottom: -40px;
+	text-align: center;
+}
+
+.home-bg a::before {
+	content: url('../icons/ROND\ ORANGE.svg');
+	position: absolute;
+	width: 120px;
+	margin-left: auto;
+	margin-right: auto;
+	left: 40px;
+	right: 0;
+	bottom: -110px;
+	transform: rotate(90deg);
+	text-align: center;
+	z-index: 5;
+}
+
+.home-bg-v2 {
+	width: 100%;
+	position: relative;
+	z-index: 10;
+	max-width: 1920px;
+}
+
+.home-bg-v2 > a {
+	width: 100%;
+	position: relative;
+	cursor: default;
+}
+
+.home-bg-v2 > a img {
+	width: 100%;
+	position: relative;
+	z-index: 8;
+}
+
+.home-bg-v2 a::after {
+	content: url('../icons/FLECHE\ BAS\ BLEUE.svg');
+	z-index: 11;
+	width: 65px;
+	position: absolute;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+	bottom: -95px;
+	text-align: center;
+}
+
+.home-bg-v2 a::before {
+	content: url('../icons/ROND\ ORANGE.svg');
+	position: absolute;
+	width: 120px;
+	margin-left: auto;
+	margin-right: auto;
+	left: 40px;
+	right: 0;
+	bottom: -110px;
+	transform: rotate(90deg);
+	text-align: center;
+	z-index: 5;
+}
 
 
 /* ================================
@@ -310,59 +410,6 @@ header {
 
 ================================== */
 
-#home {
-	width: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	position: relative;
-	z-index: 5;
-}
-
-.home-bg {
-	width: 100%;
-	position: relative;
-	z-index: 10;
-	max-width: 1920px;
-}
-
-.home-bg > a {
-	width: 100%;
-	position: relative;
-}
-
-.home-bg > a img {
-	width: 100%;
-	position: relative;
-	z-index: 8;
-}
-
-.home-bg a::after {
-	content: url('../icons/FLECHE\ BAS\ BLEUE.svg');
-	z-index: 11;
-	width: 80px;
-	position: absolute;
-	margin-left: auto;
-	margin-right: auto;
-	left: 0;
-	right: 0;
-	bottom: -40px;
-	text-align: center;
-}
-
-.home-bg a::before {
-	content: url('../icons/ROND\ ORANGE.svg');
-	position: absolute;
-	width: 120px;
-	margin-left: auto;
-	margin-right: auto;
-	left: 40px;
-	right: 0;
-	bottom: -110px;
-	transform: rotate(90deg);
-	text-align: center;
-	z-index: 5;
-}
 
 .home-container {
 	width: 100%;
@@ -647,20 +694,6 @@ header {
 	margin: 70px 0;
 }
 
-.left-btn2 {
-	width: 10%;
-	order: 1;
-	flex-grow: 1;
-	display: flex;
-	justify-content: flex-start;
-	align-items: center;
-}
-
-.left-btn2 img {
-	width: 115px;
-	cursor: pointer;
-}
-
 .slider2 {
 	width: 55%;
 	order: 2;
@@ -668,20 +701,6 @@ header {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-}
-
-.right-btn2 {
-	width: 10%;
-	order: 3;
-	flex-grow: 1;
-	display: flex;
-	justify-content: flex-end;
-	align-items: center;
-}
-
-.right-btn2 img {
-	width: 115px;
-	cursor: pointer;
 }
 
 .slider-card {
@@ -693,11 +712,11 @@ header {
 	text-align: center;
 }
 
-.slider-card:nth-child(2) {
+.splide2 .splide__track .slider-card:nth-child(2) {
 	position: relative;
 }
 
-.slider-card:nth-child(2) > img:nth-child(1) {
+.splide2 .splide__track .slider-card:nth-child(2) > img:nth-child(1) {
 	position: absolute;
 	z-index: 2;
 	bottom: -45px;
@@ -706,7 +725,7 @@ header {
 	transform: rotate(150deg);
 }
 
-.slider-card:nth-child(2) > img:nth-child(2) {
+.splide2 .splide__track .slider-card:nth-child(2) > img:nth-child(2) {
 	position: absolute;
 	z-index: 2;
 	top: -110px;
@@ -1209,6 +1228,7 @@ header {
 	justify-content: center;
 	align-items: center;
 	margin: 150px auto;
+	margin-bottom: 100px;
 }
 
 .user-container {
@@ -1342,6 +1362,70 @@ header {
 	font-weight: 300;
 	font-size: 1.7em;
 	margin-bottom: 50px;
+}
+
+#mes-formations {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.mes-formations-container {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: column;
+	text-align: center;
+}
+
+.mes-formations-container > h1 {
+	font-family: bc-alphapipe, sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 2.2em;
+}
+
+.mes-formations-list {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-flow: column;
+	margin: 40px auto;
+}
+
+.mes-formations-card {
+	background-color: white;
+	width: 60%;
+	height: 150px;
+	border-radius: 70px;
+	text-align: left;
+	padding: 30px;
+	padding-left: 40px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 10px auto;
+	-webkit-box-shadow: 0px 0px 19px -9px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 0px 19px -9px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 19px -9px rgba(0,0,0,0.75);
+}
+
+.mes-formations-card-text {
+	padding-right: 100px;
+}
+
+.mes-formations-card-text h3 {
+	font-weight: 300;
+	font-size: 1.4em;
+}
+
+.mes-formations-card-text p {
+	font-size: 1.3em;
+	font-weight: 300;
+	margin-top: 10px;
 }
 
 /* ================================
@@ -1625,7 +1709,7 @@ header {
 .forum-messages-container > img {
 	justify-self: center;
 	align-self: center;
-	width: 140px;
+	width: 70px;
 	cursor: pointer;
 }
 
@@ -1638,7 +1722,7 @@ header {
 }
 
 .forum-message:last-of-type {
-	margin-bottom: 20px;
+	margin-bottom: 50px;
 }
 
 .forum-user-img {
@@ -1761,4 +1845,14 @@ header {
 	font-size: 1.5em;
 	font-weight: 200;
 	cursor: pointer;
+}
+
+/* ================================
+
+			FINANCEMENT
+
+================================== */
+
+#salarie {
+	width: 100%;
 }
