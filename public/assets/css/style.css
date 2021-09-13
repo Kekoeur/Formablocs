@@ -1363,7 +1363,6 @@ header {
 	font-size: 1.7em;
 	margin-bottom: 50px;
 }
-
 #mes-formations {
 	width: 100%;
 	display: flex;
@@ -1855,4 +1854,27 @@ header {
 
 #salarie {
 	width: 100%;
+  
+/* ================================
+
+			 CONTACT
+
+================================== */
+
+.orange-circle:nth-child(1){
+	width: 100px;
+	position: absolute;
+	top: -80px;
+	left: -60px;
+	transform: rotate(230deg);
+	z-index: 1;
+}
+
+.orange-circle:nth-child(2){
+	width: 100px;
+	position: absolute;
+	bottom: 20px;
+	right: -60px;
+	transform: rotate(60deg);
+	z-index: 1;
 }
