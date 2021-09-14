@@ -2132,3 +2132,214 @@ header {
 .carousel-dots .active-dot {
 	background-color: var(--red);
 }
+
+/* ================================
+
+		    LOGIN-SIGNUP
+
+================================== */
+
+#login {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 20px 0;
+}
+
+.login-container {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: column;
+}
+
+.login-container > h1 {
+	font-family: bc-alphapipe, sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 2.2em;
+	color: var(--blue);
+}
+
+.login-container form {
+	width: 600px;
+	background-color: transparent;
+}
+
+.login-group {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	flex-flow: column;
+	margin: 20px 0;
+}
+
+.login-group label {
+	font-size: 1.5em;
+	margin-bottom: 10px;
+}
+
+.login-group span {
+	width: 100%;
+	position: relative;
+}
+
+.login-group span img {
+	position: absolute;
+	left: 0;
+	top: 10px;
+	width: 25px;
+}
+
+.login-group:nth-child(2) span img {
+	position: absolute;
+	left: 0;
+	top: 10px;
+	width: 20px;
+}
+
+.login-group input {
+	width: 100%;
+	background-color: transparent;
+	border: 0;
+	border-bottom: 2px solid rgba(201, 201, 201, 0.748);
+	font-size: 1.3em;
+	padding: 10px 50px;
+	outline: none;
+	position: relative;
+}
+
+.login-group input::placeholder {
+	opacity: .6;
+}
+
+.login-bottom {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: column;
+}
+
+.login-bottom p {
+	font-weight: 300;
+	color: rgb(165, 165, 165);
+	font-size: 1.2em;
+}
+
+.login-bottom p a {
+	color: rgb(165, 165, 165);
+	text-decoration: underline;
+}
+
+.login-bottom button {
+	width: 420px;
+	background-color: #e8491c;
+	color: white;
+	padding: 15px 15px;
+	border-radius: 50px;
+	border: none;
+	font-size: 1.5em;
+	font-weight: 200;
+	cursor: pointer;
+	margin: 10px 0;
+}
+
+.login-bottom img {
+	width: 40px;
+	cursor: pointer;
+	transition: all .3s;
+}
+
+.max-height {
+	max-height: 0;
+	overflow: hidden;
+	-webkit-transition: max-height 1s;
+	-moz-transition: max-height 1s;
+	-ms-transition: max-height 1s;
+	-o-transition: max-height 1s;
+	transition: max-height 1s;
+}
+
+#signup {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 10px;
+}
+
+.show-signup {
+	max-height: 1000px;
+}
+
+.rotate-btn {
+	transform: rotate(180deg);
+}
+
+.signup-container {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.signup-container form {
+	width: 80%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: column;
+}
+
+.signup-row {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.signup-group {
+	width: 45%;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	flex-flow: column;
+}
+
+.signup-group label {
+	font-size: 1.6em;
+	font-weight: 300;
+}
+
+.signup-group input {
+	width: 100%;
+	background-color: transparent;
+	border: 0;
+	border-bottom: 2px solid rgba(201, 201, 201, 0.748);
+	font-size: 1.3em;
+	padding: 10px 0;
+	outline: none;
+	position: relative;
+	margin: 15px 0;
+}
+
+.signup-group input::placeholder {
+	opacity: .6;
+}
+
+.signup-container form > button {
+	width: 420px;
+	background-color: #e8491c;
+	color: white;
+	padding: 15px 15px;
+	border-radius: 50px;
+	border: none;
+	font-size: 1.5em;
+	font-weight: 200;
+	cursor: pointer;
+	margin: 30px 0;
+}

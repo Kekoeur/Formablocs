@@ -16,7 +16,7 @@
 					<?php if (isset($_SESSION['user_id'])) { ?>
 						<a class="user-icon" href="<?=$domain?>/../users/user.php"><img src="<?=$domain?>/icons/USER.svg" alt="Votre compte"></a>
 					<?php } else { ?>
-						<a class="user-icon" href="<?=$domain?>/../users/login.php"><img src="<?=$domain?>/icons/USER.svg" alt="Votre compte"></a>
+						<a class="user-icon" href="<?=$domain?>/../login-signup.php"><img src="<?=$domain?>/icons/USER.svg" alt="Votre compte"></a>
 					<?php } ?>
 				</div>
 			</div>
