@@ -72,10 +72,10 @@ require_once (__DIR__ . '/includes/header.php');
 						<p><?=$row['description']?></p>
 						<div class="card-btns">
 						<?php if (isset($_SESSION['user_id'])) { ?>
-							<form action="../checkout-session.php?formation=<?=$row['formation']?>" method="POST">
+							<form action="../checkout-session.php?link=<?=$row['link']?>" method="POST">
 								<button type="submit">Acheter cette formation</button>
 							</form>
-							<form action="../create-quote.php?formation=<?=$row['formation']?>" method="POST">
+							<form action="../create-quote.php?link=<?=$row['link']?>" method="POST">
 								<button type="submit">Obtenir un devis</button>
 							</form>
 						<?php } else { ?>
@@ -97,10 +97,10 @@ require_once (__DIR__ . '/includes/header.php');
 						<p><?=$row2['description']?></p>
 						<div class="card-btns">
 						<?php if (isset($_SESSION['user_id'])) { ?>
-							<form action="../checkout-session.php?formation=<?=$row['formation']?>" method="POST">
+							<form action="../checkout-session.php?link=<?=$row2["link"]?>" method="POST">
 								<button type="submit">Acheter ce module</button>
 							</form>
-							<form action="../create-quote.php?formation=<?=$row['formation']?>" method="POST">
+							<form action="../create-quote.php?link=<?=$row2["link"]?>" method="POST">
 								<button type="submit">Obtenir un devis</button>
 							</form>
 						<?php } else { ?>
@@ -126,10 +126,10 @@ require_once (__DIR__ . '/includes/header.php');
 							<p><?=$row3['description']?></p>
 							<div class="card-btns">
 							<?php if (isset($_SESSION['user_id'])) { ?>
-								<form action="../checkout-session.php?formation=<?=$row['formation']?>" method="POST">
+								<form action="../checkout-session.php?link=<?=$row3["link"]?>" method="POST">
 									<button type="submit">Acheter ce module</button>
 								</form>
-								<form action="../create-quote.php?formation=<?=$row['formation']?>" method="POST">
+								<form action="../create-quote.php?link=<?=$row3["link"]?>" method="POST">
 									<button type="submit">Obtenir un devis</button>
 								</form>
 							<?php } else { ?>

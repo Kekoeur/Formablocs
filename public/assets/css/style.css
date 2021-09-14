@@ -2651,12 +2651,6 @@ header {
 	position: relative;
 }
 
-.formation-card-container > img:first-of-type {
-	width: 60px;
-	margin: auto;
-	cursor: pointer;
-}
-
 .formation-card-container > img {
 	width: 50%;
 	margin: 50px auto;
@@ -2852,3 +2846,15 @@ header {
 ::-webkit-scrollbar-corner {
 	background: transparent;
 }
+
+/* ================================
+			PRESTATIONS
+================================== */
+
+#prestations {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-content: center;
+}
+
