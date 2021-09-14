@@ -20,17 +20,11 @@ require_once (__DIR__ . '../../db/global_db.php');
 	
 	<!-- ================= CSS ================= -->
 	<link rel="stylesheet" href="<?=$domain?>/css/style.css">
-<<<<<<< HEAD
-    <link rel="stylesheet" href="https://use.typekit.net/afv1gmg.css">
-    
-    <script src="<?=$domain?>/js/modal.js" ></script>
-=======
 	<link rel="stylesheet" href="https://use.typekit.net/afv1gmg.css">
 
 	<!-- ================ SCRIPTS ================ -->
 	<script src="https://kit.fontawesome.com/babf6c6ed5.js" crossorigin="anonymous"></script>
 
->>>>>>> d2e186bdb29061edd06e776dbfae24900f19f401
 </head>
 <body>
 
