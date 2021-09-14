@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.0.4
 -- https://www.phpmyadmin.net/
 --
--- Hôte : 127.0.0.1
--- Généré le : mar. 14 sep. 2021 à 19:42
--- Version du serveur : 10.4.20-MariaDB
--- Version de PHP : 8.0.8
+-- Hôte : localhost
+-- Généré le : mar. 14 sep. 2021 à 23:38
+-- Version du serveur :  10.4.16-MariaDB
+-- Version de PHP : 7.4.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -43,7 +43,8 @@ CREATE TABLE `customers` (
 --
 
 INSERT INTO `customers` (`id`, `name`, `email`, `stripe_id`, `formations`, `passw`, `purchased_date`, `username`) VALUES
-(10, 'Carlo Cilento', 'ccarlo@hotmail.it', 'cus_KE3KnzbIZtQ7yA', NULL, '$2y$10$dbas9qpewcr4GYkEjUVrUe8rI9.kZmNkR1dE.6R7DICe3VVPbwVYK', NULL, 'ccilento');
+(10, 'Carlo Cilento', 'ccarlo@hotmail.it', 'cus_KE3KnzbIZtQ7yA', NULL, '$2y$10$dbas9qpewcr4GYkEjUVrUe8rI9.kZmNkR1dE.6R7DICe3VVPbwVYK', NULL, 'ccilento'),
+(11, 'Christopher Gauthier', 'christo26.g@gmail.com', 'cus_KEB5axe8IIrurK', NULL, '$2y$10$wm5EVsa2NXzExPGqoT/Nh.GmWkMI7CwrLvPPK5d54c2izQ.wEAwrG', NULL, 'Kekoeur');
 
 -- --------------------------------------------------------
 
@@ -138,31 +139,6 @@ INSERT INTO `prestations` (`id`, `prestation`, `price`, `price_id`, `picto`) VAL
 (4, 'Gestion - Ingénierie financière : mise en place de grilles de coût, calcul de rentabilité, identification des charges fixes et variable, fixation du prix', '1000.00', 'price_1JXq96FXn081ePt8I9iEyOPP', 'ICONE ACCOMPAGNEMENT - PROFIL.svg'),
 (5, 'Gestion - Bilan pédagogique annuel - accompagnement à la rédaction du BPA obligatoire', '900.00', 'price_1JXq9hFXn081ePt81CCe8hkY', 'ICONE ACCOMPAGNEMENT - PROFIL.svg');
 
--- --------------------------------------------------------
-
---
--- Structure de la table `toutes_formations`
---
-
-CREATE TABLE `toutes_formations` (
-  `id` int(6) NOT NULL,
-  `formation` varchar(300) NOT NULL,
-  `price_id` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Déchargement des données de la table `toutes_formations`
---
-
-INSERT INTO `toutes_formations` (`id`, `formation`, `price_id`) VALUES
-(1, 'Formateur Professionnel d\'Adultes', 'price_1JXplgFXn081ePt8kRuMbLc7'),
-(2, 'Conseiller en Insertion Professionnelle', 'price_1JXpnjFXn081ePt8bIZh09AL'),
-(3, 'Préparer et animer des actions de formation collectives en intégrant des environnements numériques (bac+2)', 'price_1JXpvfFXn081ePt8tJKhH5XO'),
-(4, 'Construire des parcours individualisés et  accompagner les apprenants (bac+2)', 'price_1JXpxeFXn081ePt8bkncllI1'),
-(5, 'Accueillir pour analyser la demande des personnes et poser les bases d\'un diagnostic partagé (bac+2)\r\n', 'price_1JXq00FXn081ePt8nGT1NcVY'),
-(6, 'Accompagner les personnes dans leur parcours d\'insertion sociale et professionnelle (bac+2)', 'price_1JXq1vFXn081ePt83mIsenWO'),
-(7, 'Mettre en œuvre une offre de services auprès des employeurs pour  favoriser l\'insertion professionnelle) (bac+2)', 'price_1JXq2uFXn081ePt8cGdo9Yfr');
-
 --
 -- Index pour les tables déchargées
 --
@@ -174,36 +150,6 @@ ALTER TABLE `customers`
   ADD PRIMARY KEY (`id`);
 
 --
--- Index pour la table `formations`
---
-ALTER TABLE `formations`
-  ADD PRIMARY KEY (`id`);
-
---
--- Index pour la table `modules_formation_adultes`
---
-ALTER TABLE `modules_formation_adultes`
-  ADD PRIMARY KEY (`id`);
-
---
--- Index pour la table `modules_formation_conseiller`
---
-ALTER TABLE `modules_formation_conseiller`
-  ADD PRIMARY KEY (`id`);
-
---
--- Index pour la table `prestations`
---
-ALTER TABLE `prestations`
-  ADD PRIMARY KEY (`id`);
-
---
--- Index pour la table `toutes_formations`
---
-ALTER TABLE `toutes_formations`
-  ADD PRIMARY KEY (`id`);
-
---
 -- AUTO_INCREMENT pour les tables déchargées
 --
 
@@ -211,37 +157,7 @@ ALTER TABLE `toutes_formations`
 -- AUTO_INCREMENT pour la table `customers`
 --
 ALTER TABLE `customers`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
-
---
--- AUTO_INCREMENT pour la table `formations`
---
-ALTER TABLE `formations`
-  MODIFY `id` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
-
---
--- AUTO_INCREMENT pour la table `modules_formation_adultes`
---
-ALTER TABLE `modules_formation_adultes`
-  MODIFY `id` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
-
---
--- AUTO_INCREMENT pour la table `modules_formation_conseiller`
---
-ALTER TABLE `modules_formation_conseiller`
-  MODIFY `id` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
---
--- AUTO_INCREMENT pour la table `prestations`
---
-ALTER TABLE `prestations`
-  MODIFY `id` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
-
---
--- AUTO_INCREMENT pour la table `toutes_formations`
---
-ALTER TABLE `toutes_formations`
-  MODIFY `id` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
