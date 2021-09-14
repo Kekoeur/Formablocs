@@ -14,7 +14,8 @@
 				<div class="right-icons">
 					<a href="<?=$domain?>/../index.php"><img src="<?=$domain?>/icons/MAISON BLANCHE.svg" alt="Accueil"></a>
 					<?php if (isset($_SESSION['user_id'])) { ?>
-						<a class="user-icon" href="<?=$domain?>/../users/user.php"><img src="<?=$domain?>/icons/USER.svg" alt="Votre compte"></a>
+						<a class="user-icon" href="<?=$domain?>/../users/user.php"><img src="<?=$domain?>/icons/USER.svg" alt="Votre compte"> <?php echo $_SESSION['user_name']?></a>
+						<a href="<?=$domain?>/../includes/logout.php"><img src="<?=$domain?>/icons/MAISON BLANCHE.svg" alt="Déconnexion"></a>
 					<?php } else { ?>
 						<a class="user-icon" href="<?=$domain?>/../login-signup.php"><img src="<?=$domain?>/icons/USER.svg" alt="Votre compte"></a>
 					<?php } ?>
@@ -27,7 +28,7 @@
 	<div class="container">
 		<div class="nav">
 			<div class="logo">
-				<img src="<?=$domain?>/img/logo.png" alt="Formablocs | Accueil">
+				<a href="<?=$domain?>/../index.php"><img src="<?=$domain?>/img/logo.png" alt="Formablocs | Accueil"></a>
 			</div>
 			<div class="navlinks">
 				<ul class="navlist">

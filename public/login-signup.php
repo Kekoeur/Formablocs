@@ -5,7 +5,28 @@ require_once (__DIR__ . '/includes/header.php');
 
 ?>
 
-<?php
+<section id="login">
+
+	<div class="container">
+		<div class="login-container">
+			<h1>Bonjour !</h1>
+			<form  action="" method="POST" >
+				<div class="login-group">
+					<label for="login-username">Nom d'utilisateur</label>
+					<span>
+						<img src="<?=$domain?>/icons/USER ORANGE.svg" alt="">
+						<input id="login-username" type="text" name="login-username" placeholder="Entrez votre nom d'utilisateur">
+					</span>
+				</div>
+	
+				<div class="login-group">
+					<label for="login-password-id">Mot de passe</label>
+					<span>
+						<img src="<?=$domain?>/icons/CADENAS MDP.svg" alt="">
+						<input id="login-password-id" type="password" name="login-password" placeholder="Entrez votre mot de passe">
+					</span>
+				</div>
+        <?php
 
     if(isset($_POST['submit_login'])){
         
@@ -24,6 +45,7 @@ require_once (__DIR__ . '/includes/header.php');
                 //Vérifier si le Password correspond
                 if(password_verify($password, $db_password)){
                     $_SESSION['user_id'] = $user['id'];
+                    $_SESSION['user_name'] = $user['username'];
                     header("Location: index.php");
                     exit();
                 }else{
@@ -54,29 +76,6 @@ require_once (__DIR__ . '/includes/header.php');
         } */
     }
 ?>
-
-<section id="login">
-
-	<div class="container">
-		<div class="login-container">
-			<h1>Bonjour !</h1>
-			<form  action="" method="POST" >
-				<div class="login-group">
-					<label for="login-username">Nom d'utilisateur</label>
-					<span>
-						<img src="<?=$domain?>/icons/USER ORANGE.svg" alt="">
-						<input id="login-username" type="text" name="login-username" placeholder="Entrez votre nom d'utilisateur">
-					</span>
-				</div>
-	
-				<div class="login-group">
-					<label for="login-password-id">Mot de passe</label>
-					<span>
-						<img src="<?=$domain?>/icons/CADENAS MDP.svg" alt="">
-						<input id="login-password-id" type="password" name="login-password" placeholder="Entrez votre mot de passe">
-					</span>
-				</div>
-	
 				<div class="login-bottom">
 					<p>Mot de passe oublié ? Cliquez <a id="open_modal" href="#modal">ici</a></p>
 					<button class="btn" id="submit-login_btn" type="submit" name="submit_login">Me connecter</button>
@@ -88,7 +87,6 @@ require_once (__DIR__ . '/includes/header.php');
 	</div>
 
 </section>
-
 
 <?php
 
@@ -190,13 +188,14 @@ if(isset($_POST['submit_signup'])){
 					]);
 
 					$customerStripeID = $newCustomer->id;
-
-          			$run_register_query= $pdo->query("INSERT INTO customers (name, username, email, passw, stripe_id) VALUES (\"$name\", \"$username\", \"$email\", \"$passHash\", \"$customerStripeID\")");
-					if($run_register_query){
+          $sql = "INSERT INTO customers (name, username, email, passw, stripe_id) VALUES (?, ?, ?, ?, ?)";
+          $run_register_query= $pdo->prepare($sql);
+					if($run_register_query->execute([$name, $username, $email, $passHash, $customerStripeID])){
 						$user = $pdo->query("SELECT * FROM customers WHERE stripe_id='". $customerStripeID . "'");
 						$loggedIn = $user->fetch(PDO::FETCH_ASSOC);
 
-						$_SESSION['user_id'] = $loggedIn['id'];
+            $_SESSION['user_id'] = $loggedIn['id'];
+            $_SESSION['user_name'] = $loggedIn['username'];
 						header("Location: /index.php");
 					} else {
 						echo "<p class=\"comments\">ERROR! Impossible de vous enregistrer maintenant, veuillez reéssayer</p>";

@@ -2113,7 +2113,14 @@ header {
 	align-items: center;
 	margin: 20px 0;
 }
-
+.comments {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    font-size: 1em;
+    color: var(--red);
+}
 .login-container {
 	width: 100%;
 	display: flex;
