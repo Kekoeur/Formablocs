@@ -13,9 +13,9 @@ require_once (__DIR__ . '/includes/header.php');
 <section id="home-ctas">
 	<div class="container">
 		<div class="home2-btns">
-			<a href="formations.php"><button>Je suis salarié</button></a>
-			<a href="financement.php"><button>Je suis demandeur d'emploi</button></a>
-			<a href="formations.php"><button>Autres cas</button></a>
+			<a href="formations.php" class="blue-hover"><button>Je suis salarié</button></a>
+			<a href="financement.php" class="blue-hover"><button>Je suis demandeur d'emploi</button></a>
+			<a href="formations.php" class="blue-hover"><button>Autres cas</button></a>
 		</div>
 	</div>
 </section>

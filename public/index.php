@@ -14,8 +14,8 @@ require_once (__DIR__ . '/includes/header.php');
 <section id="home-ctas">
 	<div class="container">
 		<div class="home-btns">
-			<a href="formations.php"><button>Consulter les formations</button></a>
-			<a href="financement.php"><button>Mes options de financement</button></a>
+			<a href="formations.php" class="blue-hover"><button>Consulter les formations</button></a>
+			<a href="financement.php" class="blue-hover"><button>Mes options de financement</button></a>
 		</div>
 	</div>
 </section>
@@ -126,7 +126,7 @@ require_once (__DIR__ . '/includes/header.php');
 				</div>
 			</div>
 			<div class="cta-btn-home">
-				<a href="#"><button>Découvrir nos formations</button></a>
+				<a href="#" class="red-hover"><button>Découvrir nos formations</button></a>
 			</div>
 		</div>
 	</div>
@@ -210,7 +210,7 @@ require_once (__DIR__ . '/includes/header.php');
 				</div>
 			</div>
 			<div class="cta-btn-carousel">
-				<a href="#"><button>Découvrir nos prestations</button></a>
+				<a href="#" class="red-hover"><button>Découvrir nos prestations</button></a>
 			</div>
 		</div>
 

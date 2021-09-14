@@ -44,9 +44,17 @@ button, input, select, option, textarea {
 
 
 /* ================================
-		  STYLES GENERALES
+		  GENERAL STYLES
 ================================== */
 
+
+
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px #ffffff inset !important;
+  -webkit-text-fill-color: rgb(0, 0, 0) !important;
+}
 
 .container {
 	width: 85%;
@@ -172,6 +180,66 @@ button, input, select, option, textarea {
 	z-index: 5;
 }
 
+.red-hover button {
+	transition: all .2s ease;
+	border: 2px solid transparent !important;
+}
+
+.red-hover button:hover {
+	background-color: transparent;
+	border: 2px solid var(--red) !important;
+	color: var(--red);
+}
+
+.blue-hover button {
+	transition: all .2s ease;
+	border: 2px solid transparent !important;
+}
+
+.blue-hover button:hover {
+	background-color: transparent;
+	border: 2px solid var(--blue) !important;
+	color: var(--blue);
+}
+
+/* ================================
+			 SCROLLBAR
+================================== */
+
+::-webkit-scrollbar {
+	width: 10px;
+	height: 5px;
+}
+::-webkit-scrollbar-button {
+	width: 0px;
+	height: 0px;
+}
+::-webkit-scrollbar-thumb {
+	background: var(--red);
+	border: 31px none #ffffff;
+	border-radius: 0px;
+	transition: all .3s ease;
+}
+::-webkit-scrollbar-thumb:hover {
+	background: var(--blue);
+}
+::-webkit-scrollbar-thumb:active {
+	background: var(--red);
+}
+::-webkit-scrollbar-track {
+	background: #f0f0f0;
+	border: 1px solid #ffffff;
+	border-radius: 5px;
+}
+::-webkit-scrollbar-track:hover {
+	background: #f2f2f2;
+}
+::-webkit-scrollbar-track:active {
+	background: #f5f5f5;
+}
+::-webkit-scrollbar-corner {
+	background: transparent;
+}
 
 /* ================================
 			  FOOTER
@@ -2163,6 +2231,7 @@ header {
 
 .login-group span img {
 	position: absolute;
+	z-index: 9999;
 	left: 0;
 	top: 10px;
 	width: 25px;
@@ -2665,13 +2734,17 @@ header {
 
 .formation-card {
 	width: 100%;
-	padding: 30px 50px 10px 50px;
 	border-radius: 60px;
 	-webkit-box-shadow: 0px 0px 32px -19px rgba(0,0,0,0.75);
 	-moz-box-shadow: 0px 0px 32px -19px rgba(0,0,0,0.75);
 	box-shadow: 0px 0px 32px -19px rgba(0,0,0,0.75);
-	font-size: 1.2em;
 	margin: 30px 0;
+}
+
+.card-wrapper {
+	width: 100%;
+	padding: 30px 50px 10px 50px;
+	font-size: 1.2em;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -2679,7 +2752,23 @@ header {
 	text-align: center;
 }
 
-.formation-card > h2 {
+.module {
+	max-height: 0px;
+	margin: 0;
+	overflow: hidden;
+	-webkit-transition: all .5s ease;
+	-moz-transition: all .5s ease;
+	-ms-transition: all .5s ease;
+	-o-transition: all .5s ease;
+	transition: all .5s ease;
+}
+
+.module-active {
+	max-height: 1000px;
+	margin: 30px 0;
+}
+
+.card-wrapper > h2 {
 	font-size: 1.3em;
 	margin-bottom: 30px;
 	padding: 0 30px;
@@ -2773,6 +2862,22 @@ header {
 .formations-footer > img {
 	width: 60%;
 }
+
+.display_module {
+	transition: all .2s ease;
+}
+
+.display_module_container {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.display-module_container img {
+	width: 50px;
+	cursor: pointer;
+}
 /* ================================
 			 MODAL
 ================================== */
@@ -2813,45 +2918,6 @@ header {
     right: 10px;
     color: grey;
 	text-decoration: none;
-}
-
-/* ================================
-			 SCROLLBAR
-================================== */
-
-::-webkit-scrollbar {
-	width: 10px;
-	height: 5px;
-}
-::-webkit-scrollbar-button {
-	width: 0px;
-	height: 0px;
-}
-::-webkit-scrollbar-thumb {
-	background: var(--red);
-	border: 31px none #ffffff;
-	border-radius: 0px;
-	transition: all .3s ease;
-}
-::-webkit-scrollbar-thumb:hover {
-	background: var(--blue);
-}
-::-webkit-scrollbar-thumb:active {
-	background: var(--red);
-}
-::-webkit-scrollbar-track {
-	background: #f0f0f0;
-	border: 1px solid #ffffff;
-	border-radius: 5px;
-}
-::-webkit-scrollbar-track:hover {
-	background: #f2f2f2;
-}
-::-webkit-scrollbar-track:active {
-	background: #f5f5f5;
-}
-::-webkit-scrollbar-corner {
-	background: transparent;
 }
 
 /* ================================
