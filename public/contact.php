@@ -112,6 +112,7 @@ require_once (__DIR__ . '/includes/header.php');
  
 ?>
 <section id="contact">
+<<<<<<< HEAD
 
 	<div class="container">
 		<div class="contact-container">
@@ -180,6 +181,54 @@ require_once (__DIR__ . '/includes/header.php');
 		</div>
 	</div>
 
+=======
+  <div>
+    <h1>Vous avez une question ?</h1>
+    </p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea<p>
+    <div class="row">
+      <div class="formulaire">
+          <form id="contact-form" method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>">
+            <div class="row">
+              <div class="col-md-6">
+                <label for="name">Nom <span class="color">*</span></label>
+                <input id="name" type="text" name="name" class="form-control" placeholder="Entrez votre nom">
+                <p class="comments"></p>
+              </div>
+              <div class="col-md-6">
+                <label for="firstname">Prénom <span class="color">*</span></label>
+                <input id="firstname" type="text" name="firstname" class="form-control" placeholder="Entrez votre prénom">
+                <p class="comments"></p>
+              </div>
+              <div class="col-md-6">
+                <label for="email">Adresse e-mail <span class="color">*</span></label>
+                <input id="email" type="text" name="email" class="form-control" placeholder="Entrez votre adresse e-mail">
+                <p class="comments"></p>
+              </div>
+              <div class="col-md-6">
+                <label for="phone">Téléphone</label>
+                <input id="phone" type="tel" name="phone" class="form-control" placeholder="Entrez votre numéro de téléphone">
+                <p class="comments"></p>
+              </div>
+              <div class="col-md-6">
+                <label for="subject">Sujet du message <span class="color">*</span></label>
+                <input id="subject" type="text" name="subject" class="form-control" placeholder="Entrez votre sujet du message">
+                <p class="comments"></p>
+              </div>
+              <img class="orange-circle" src="/assets/icons/ROND ORANGE.svg" alt="">
+              <div class="col-md-12">
+                <textarea id="message" name="message" class="form-control" placeholder="Ecrivez votre message" rows="8"></textarea>
+                <p class="comments"></p>
+              </div>
+              <img class="orange-circle" src="/assets/icons/ROND ORANGE.svg" alt="">
+              <div class="col-md-12">
+                <input type="submit" class="button" value="Envoyer">
+              </div>    
+            </div>
+          </form>
+        </div>
+    </div>
+  </div>
+>>>>>>> e71e838930f2a9c3f1fee2796c0022141b9abf77
 </section>
 <?php
 
