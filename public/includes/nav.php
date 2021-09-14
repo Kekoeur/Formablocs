@@ -16,7 +16,7 @@
 					<?php if (isset($_SESSION['user_id'])) { ?>
 						<a class="user-icon" href="<?=$domain?>/../users/user.php"><img src="<?=$domain?>/icons/USER.svg" alt="Votre compte"></a>
 					<?php } else { ?>
-						<a class="user-icon" href="<?=$domain?>/../users/login.php"><img src="<?=$domain?>/icons/USER.svg" alt="Votre compte"></a>
+						<a class="user-icon" href="<?=$domain?>/../login-signup.php"><img src="<?=$domain?>/icons/USER.svg" alt="Votre compte"></a>
 					<?php } ?>
 				</div>
 			</div>
@@ -35,7 +35,6 @@
 					<li><a href="<?=$domain?>/../prestations.php">Nos prestations de conseil</a></li>
 					<li><a href="<?=$domain?>/../financement.php">Financement</a></li>
 					<li><a href="<?=$domain?>/../contact.php">Contact</a></li>
-					<li><a href="<?=$domain?>/../formations.php">Devis</a></li>
 					<li><a href="<?=$domain?>/../forum.php">Forum</a></li>
 				</ul>
 			</div>

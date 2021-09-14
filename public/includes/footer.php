@@ -1,8 +1,8 @@
 <footer>
 	<div class="container">
 		<div class="foot-cols">			
-			<div class="ft-col">
-				<img src="/Projet%204/public/assets/img/LOGO FOOTER.svg" alt="">
+			<div class="ft-col" itemscope itemtype="https://schema.org/Organization">
+				<img itemprop="logo" src="/Projet%204/public/assets/img/LOGO FOOTER.svg" alt="">
 				<p>c'est un accompagnement individualisé, un parcours adapté à vos contraintes</p>
 				<div class="ft-icons">
 					<img src="/Projet%204/public/assets/icons/INSTAGRAM.svg" alt="Instagram | Formablocs">
@@ -11,8 +11,8 @@
 					<img src="/Projet%204/public/assets/icons/LINEKEDIN.svg" alt="Linkedin | Formablocs">
 				</div>
 				<p>
-					<span>Tél : </span>07 89 67 23 43 <br>
-					<span>E-mail : </span>forma.blocs@blabla.fr
+					<span>Tél : </span><i itemprop="telephone">02 00 99 11 88</i><br>
+					<span>E-mail : </span><i itemprop="email">contact@formablocs.com</i>
 				</p>
 			</div>
 			<div class="ft-col">
@@ -52,11 +52,9 @@
 	</div>
 	<div class="foot-footer">
 		<div class="footer-links">
-			<a href="#">Mentions légales</a>
-			<a href="#">Paramètres de cookies</a>
-			<a href="#">Conditions d'utilisation</a>
+			<a href="#">Mentions légales et politiques de confidentialité</a>
+			<a href="#">Conditions générales d'utilisation</a>
 			<a href="#">Conditions générales de vente</a>
-			<a href="#">Politique en matière de confidentialité</a>
 		</div>
 	</div>
 </footer>
