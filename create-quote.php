@@ -9,8 +9,8 @@ $loggedIn = $user->fetch(PDO::FETCH_ASSOC);
 $userID = $loggedIn['stripe_id'];
 
 if ($_GET) {
-	$stm = $pdo->prepare("SELECT * FROM formations WHERE id = ?");
-	$stm->bindValue(1, $_GET['id']);
+	$stm = $pdo->prepare("SELECT * FROM toutes_formations WHERE formation = ?");
+	$stm->bindValue(1, $_GET['formation']);
 	$stm->execute();
 	$row = $stm->fetch(PDO::FETCH_ASSOC);
 }
