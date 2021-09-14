@@ -2343,3 +2343,465 @@ header {
 	cursor: pointer;
 	margin: 30px 0;
 }
+
+/* ================================
+
+		 FINANCEMENT CAROUSEL
+
+================================== */
+
+#contact {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 30px;
+}
+
+.contact-container {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: column;
+}
+
+.contact-text {
+	width: 80%;
+	text-align: center;
+}
+
+.contact-text h1 {
+	font-family: bc-alphapipe, sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 2.2em;
+	color: var(--blue);
+	margin-bottom: 20px;
+}
+
+.contact-text p {
+	font-weight: 300;
+	font-size: 1.3em;
+}
+
+.contact-container form {
+	width: 80%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: column;
+	margin-top: 40px;
+}
+
+.contact-row {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.contact-group {
+	width: 45%;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	flex-flow: column;
+	margin: 10px 0;
+}
+
+.contact-container form > .contact-group {
+	align-self: flex-start;
+}
+
+.contact-group label {
+	font-size: 1.6em;
+	font-weight: 300;
+}
+
+.contact-group input {
+	width: 100%;
+	background-color: transparent;
+	border: 0;
+	border-bottom: 2px solid rgba(201, 201, 201, 0.748);
+	font-size: 1.3em;
+	padding: 10px 0;
+	outline: none;
+	position: relative;
+	margin: 10px 0;
+}
+
+.contact-group input::placeholder {
+	opacity: .6;
+}
+
+.contact-container form > button {
+	width: 420px;
+	background-color: #e8491c;
+	color: white;
+	padding: 15px 15px;
+	border-radius: 50px;
+	border: none;
+	font-size: 1.5em;
+	font-weight: 200;
+	cursor: pointer;
+	margin: 30px 0;
+}
+
+.contact-container form .textarea {
+	width: 100%;
+	margin-top: 15px;
+	position: relative;
+}
+
+.contact-container form .textarea > img:nth-child(1) {
+	position: absolute;
+	z-index: 3;
+	right: -20px;
+	top: -80px;
+	width: 110px;
+	transform: rotate(-45deg);
+}
+
+.contact-container form .textarea > img:nth-child(2) {
+	position: absolute;
+	z-index: 3;
+	left: -20px;
+	bottom: -80px;
+	width: 110px;
+	transform: rotate(130deg);
+}
+
+
+.contact-container form .textarea textarea {
+	width: 100%;
+	min-width: 100%;
+	max-width: 100%;
+	min-height: 500px;
+	max-height: 800px;
+	padding: 40px;
+	border: none;
+	border-radius: 70px;
+	font-size: 1.3em;
+	outline: none;
+	position: relative;
+	z-index: 5;
+	-webkit-box-shadow: 0px 0px 23px -12px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 0px 23px -12px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 23px -12px rgba(0,0,0,0.75);
+}
+
+.contact-container form .textarea textarea::placeholder {
+	opacity: .6;
+}
+
+.contact-banner {
+	background-image: url('../img/people/arno-smit-lndaG6uN1yw-unsplash.jpg');
+	width: 100vw;
+	height: 250px;
+	margin-bottom: 50px;
+	background-position: 0px -600px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	display: flex;
+	justify-content: center;
+	align-self: center;
+}
+
+.blur-div {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-self: center;
+	flex-flow: column;
+	text-align: center;
+	backdrop-filter: blur(4px);
+	color: white;
+}
+
+.blur-div h1 {
+	font-weight: 400;
+	font-size: 2.8em;
+}
+
+.blur-div h4 {
+	font-size: 1.8em;
+	font-weight: 400;
+	margin: 10px auto;
+}
+
+.blur-div p {
+	font-size: 1.7em;
+}
+
+.contact-container > img {
+	width: 40%;
+	margin-bottom: 50px;
+}
+
+/* ================================
+
+		 FINANCEMENT CAROUSEL
+
+================================== */
+
+.inter-section {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-self: center;
+	flex-flow: column;
+	text-align: center;
+	margin: 50px 0;
+}
+
+.inter-section img {
+	width: 25px;
+	align-self: center;
+	justify-self: center;
+	margin: 20px 0;
+	transform: rotate(90deg);
+}
+
+.inter-section h1 {
+	font-family: bc-alphapipe, sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 2.2em;
+	color: var(--red);
+}
+
+.inter-section h4 {
+	font-weight: 300;
+	font-size: 1.6em;
+}
+
+.inter-wrapper {
+	width: 100%;
+	text-align: center;
+	margin: 40px 0;
+}
+
+.inter-wrapper h5 {
+	color: rgb(76, 144, 221);
+	font-weight: 300;
+	font-size: 1.7em;
+}
+
+.inter-wrapper p {
+	font-size: 1.6em;
+	font-weight: 300;
+}
+
+.inter-wrapper p a {
+	color: black;
+}
+
+.inter-section > a {
+	width: fit-content;
+	justify-self: center;
+	align-self: center;
+}
+
+.inter-section button {
+	width: 420px;
+	background-color: #e8491c;
+	color: white;
+	padding: 15px 15px;
+	border-radius: 50px;
+	border: none;
+	font-size: 1.5em;
+	font-weight: 200;
+	cursor: pointer;
+	margin: 30px 0;
+}
+
+#formations {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: column;
+}
+
+.formations-container {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: column;
+	text-align: center;
+}
+
+.formation-header {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: column;
+	text-align: center;
+}
+
+.formation-title {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.formation-title h1 {
+	font-family: 'bc-alphapipe',sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 2em;
+	margin-left: 20px;
+	color: var(--red);
+}
+
+.formation-title h1 span {
+	color: black;
+}
+
+.formation-title img {
+	width: 28px;
+}
+
+.formations-info {
+	font-size: 1.4em;
+	margin: 30px 0;
+}
+
+.formations-info span {
+	font-weight: 600;
+}
+
+.formation-card-container {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: column;
+	position: relative;
+}
+
+.formation-card-container > img:first-of-type {
+	width: 60px;
+	margin: auto;
+	cursor: pointer;
+}
+
+.formation-card-container > img {
+	width: 50%;
+	margin: 50px auto;
+}
+
+.formation-card {
+	width: 100%;
+	padding: 30px 50px 10px 50px;
+	border-radius: 60px;
+	-webkit-box-shadow: 0px 0px 32px -19px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 0px 32px -19px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 32px -19px rgba(0,0,0,0.75);
+	font-size: 1.2em;
+	margin: 30px 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: column;
+	text-align: center;
+}
+
+.formation-card > h2 {
+	font-size: 1.3em;
+	margin-bottom: 30px;
+	padding: 0 30px;
+}
+
+.card-btns {
+	width: 70%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.card-btns form {
+	width: 40%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.card-btns form button {
+	width: 420px;
+	background-color: #e8491c;
+	color: white;
+	padding: 10px 15px;
+	border-radius: 50px;
+	border: none;
+	font-size: 1.2em;
+	font-weight: 200;
+	cursor: pointer;
+	margin: 30px auto;
+}
+
+.formations-footer {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 50px auto;
+	padding-left: 100px;
+}
+
+.f-footer-text {
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	flex-flow: column;
+}
+
+.f-footer-text-header {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	margin-bottom: 20px;
+}
+
+.f-footer-text-header h1 {
+	font-family: 'bc-alphapipe',sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 2em;
+}
+
+.f-footer-text-header img {
+	width: 25px;
+	margin-right: 20px;
+}
+
+.f-footer-text p {
+	font-size: 1.4em;
+	padding-left: 50px;
+}
+
+.f-footer-text button {
+	width: 420px;
+	background-color: #e8491c;
+	color: white;
+	padding: 15px 15px;
+	border-radius: 50px;
+	border: none;
+	font-size: 1.5em;
+	font-weight: 200;
+	cursor: pointer;
+	margin: 30px auto;
+}
+
+.f-footer-text a {
+	align-self: center;
+	justify-self: center;
+}
+
+.formations-footer > img {
+	width: 60%;
+}
