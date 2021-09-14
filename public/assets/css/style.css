@@ -2858,3 +2858,143 @@ header {
 	align-content: center;
 }
 
+.smaller-text button {
+	font-size: 1.4em;
+	padding: 20px 5px;
+}
+
+.prestations-container {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: column;
+	margin-top: 100px;
+}
+
+.prestations-container > img {
+	width: 25%;
+	margin: 30px auto;
+}
+
+.prestations-header {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.prestations-header img {
+	width: 25px;
+	margin-right: 20px;
+}
+
+.prestations-header h1 {
+	font-family: 'bc-alphapipe',sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 2em;
+}
+
+.prestations-header h1 span {
+	color: var(--red);
+}
+
+.prestations-carousel {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.prestations-card {
+	width: 80%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: column;
+	text-align: center;
+}
+
+.prestation-card-top h3 {
+	font-weight: 300;
+	font-size: 1.4em;
+	margin: 30px auto;
+}
+
+.prestation-card-top p {
+	font-size: 1.3em;
+	font-weight: 300;
+}
+
+.prestation-card-top p span {
+	font-weight: 500;
+}
+
+.prestation-top-btns {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: column;
+	margin: 20px auto;
+}
+
+.prestation-top-btns form button, .prestation-top-btns button {
+	width: 420px;
+	background-color: #e8491c;
+	color: white;
+	padding: 10px 10px;
+	border-radius: 50px;
+	border: none;
+	font-size: 1.4em;
+	font-weight: 200;
+	cursor: pointer;
+	margin: 10px auto;
+}
+
+.prestation-card-text {
+	width: 100%;
+	padding: 30px 50px 10px 50px;
+	border-radius: 60px;
+	-webkit-box-shadow: 0px 0px 32px -19px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 0px 32px -19px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 32px -19px rgba(0,0,0,0.75);
+	font-size: 1.2em;
+	margin: 30px 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: column;
+	text-align: center;
+}
+
+.prestation-left-arrow {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.prestation-right-arrow {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.prestation-left-arrow img, .prestation-right-arrow img {
+	width: 60px;
+	cursor: pointer;
+}
+
+
+.prestation-slide, .prestation2-slide, .prestation3-slide {
+	display: none;
+}
+
+.current-slide {
+	display: block;
+	animation: fadeVisibility 1s;
+}
+
+.hidden-slide {
+	display: none;
+}
