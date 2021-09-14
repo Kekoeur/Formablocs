@@ -84,9 +84,9 @@ require_once (__DIR__ . '/includes/header.php');
         {
             $headers = "From: {$array['firstname']} {$array['name']} <{$array['email']}>\r\nReply-To: {$array['email']}";
             if (mail($emailTo, "Un message de votre site : {$array['subject']}", $emailText, $headers)) {
-              echo '<p>Votre message a bien été envoyer!</p>';
+              echo "<p class='comments'>Votre message a bien été envoyer!</p>";
             } else {
-              echo "<p>Erreur ! Votre message n'a pas été envoyé</p>";
+              echo "<p class='comments'>Erreur ! Votre message n'a pas été envoyé</p>";
             }
         }
         

@@ -19,7 +19,7 @@
 require_once (__DIR__ . '/includes/header.php');
 
 ?>
-
+<script src="<?=$domain?>/js/formations.js"></script>
 <section id="home">
 	<div class="home-bg-v2">
 		<a href="#"><img src="<?=$domain?>/img/banners/Decouverte_ 1980x714 px.png" alt=""></a>
@@ -88,11 +88,11 @@ require_once (__DIR__ . '/includes/header.php');
 						<?php } ?>
 						</div>
 					</div>
-
+					<img src="assets/icons/FLECHE BAS BLEUE.svg" alt="Flèche bleue vers le bas" class="display_module">
 					<?php if ( $row === reset( $rows ) ) {
 							foreach($rows2 as $row2) {?>
 
-					<div class="formation-card">
+					<div class="formation-card module" style="display:none;">
 						<h2>Module : <?=$row2['module']?></h2>
 						<p><?=$row2['description']?></p>
 						<div class="card-btns">
@@ -115,13 +115,12 @@ require_once (__DIR__ . '/includes/header.php');
 					</div>
 
 					<?php }?>
-
 					<img src="<?=$domain?>/icons/SEPARATION SECTION.svg" alt="">
 
 					<?php } else if( $row === end( $rows ) ) {
 					foreach($rows3 as $row3) { ?>
 							
-						<div class="formation-card">
+						<div class="formation-card module" style="display:none;">
 							<h2>Module : <?=$row3['module']?></h2>
 							<p><?=$row3['description']?></p>
 							<div class="card-btns">
