@@ -53,7 +53,6 @@
 	<div class="foot-footer">
 		<div class="footer-links">
 			<a href="#">Mentions légales</a>
-			<a href="#">Paramètres de cookies</a>
 			<a href="#">Conditions d'utilisation</a>
 			<a href="#">Conditions générales de vente</a>
 			<a href="#">Politique en matière de confidentialité</a>
