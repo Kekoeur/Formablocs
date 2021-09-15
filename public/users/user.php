@@ -21,7 +21,6 @@ foreach ($formationArray as $price_f) {
 	$form = $nomFormation->fetchall(PDO::FETCH_ASSOC);
 	$name = $form[0]['formation'];
 	$picto = $form[0]['picto'];
-	echo $picto;
 }
 
 foreach ($dateArray as $dateOnly) {
