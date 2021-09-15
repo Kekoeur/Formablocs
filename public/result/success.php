@@ -20,14 +20,13 @@ $date = $sessionDetails->metadata->date;
 
 $retrievePrice = $stripe->prices->retrieve($priceID,[]);
 $retrieveProd = $retrievePrice->product;
-
 $prodInfo = $stripe->products->retrieve($retrieveProd,[]);
 $prodName = $prodInfo->name;
 
 // ================= RECUPERATION ET CONCATENATION DES INFOS DE LA BDD
 $query_user = $pdo->query("SELECT * FROM customers WHERE email = \"$customerEmail\"");
 $user = $query_user->fetchall(PDO::FETCH_ASSOC);
-$prodName = $prodName. ', '. $user[0]['formations'];
+$prodName = $priceID. ', '. $user[0]['formations'];
 $date = $date. ', '. $user[0]['purchased_date'];
 
 // ================= AJOUTER ID STRIPE CLIENT DANS DATABASE
