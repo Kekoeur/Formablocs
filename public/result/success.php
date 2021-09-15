@@ -28,7 +28,7 @@ $query_user = $pdo->query("SELECT * FROM customers WHERE email = \"$customerEmai
 $user = $query_user->fetchall(PDO::FETCH_ASSOC);
 $prodName = $priceID. ', '. $user[0]['formations'];
 $date = $date. ', '. $user[0]['purchased_date'];
-
+$array_formation = explode(', ',$user[0]['formations']);
 // ================= AJOUTER ID STRIPE CLIENT DANS DATABASE
 $stripeInfo = [
 	'stripe_id' => $customerID,
@@ -38,8 +38,9 @@ $stripeInfo = [
 ];
 $sql = "UPDATE customers SET stripe_id = :stripe_id, formations = :formations, purchased_date = :dates WHERE email = :customer_email";
 $stmt = $pdo->prepare($sql);
-$stmt->execute($stripeInfo);
-
+if(!in_array($priceID, $array_formation)){
+	$stmt->execute($stripeInfo);
+}
 
 ?>
 

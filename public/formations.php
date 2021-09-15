@@ -57,7 +57,9 @@ require_once (__DIR__ . '/includes/header.php');
 	<div class="container">
 		<div class="formations-container">
 
-			<?php foreach($rows as $row) { ?>
+			<?php foreach($rows as $row) { 
+				$price_id = $row['price_id'];
+			?>
 
 				<div class="formation-header">
 					<div class="formation-title">
@@ -77,13 +79,24 @@ require_once (__DIR__ . '/includes/header.php');
 
 							<p><?=$row['description']?></p>
 							<div class="card-btns">
-							<?php if (isset($_SESSION['user_id'])) { ?>
+							<?php if (isset($_SESSION['user_id'])) { 
+								$user_id = $_SESSION['user_id'];
+								$query_user = $pdo->query("SELECT * FROM customers WHERE id =\"$user_id\"");
+								$user = $query_user->fetch(PDO::FETCH_ASSOC);
+								$formation = explode(', ',$user['formations']);
+								if(!in_array($price_id, $formation)){
+							?>
 								<form action="../checkout-session.php?link=<?=$row['link']?>" method="POST" class="red-hover">
 									<button type="submit" class="">Acheter cette formation</button>
 								</form>
 								<form action="../create-quote.php?link=<?=$row['link']?>" method="POST" class="red-hover">
 									<button type="submit">Obtenir un devis</button>
 								</form>
+								<?php } else { ?>
+									<form action="<?=$domain?>/../users/user.php" method="POST" class="red-hover already_purchased">
+										<button type="submit" class="">Formation acheté</button>
+									</form>
+								<?php } ?>
 							<?php } else { ?>
 								<form action="login-signup.php" method="POST" class="red-hover">
 									<button type="submit">Acheter cette formation</button>
