@@ -18,7 +18,7 @@ html {
 
 body {
 	width: 100%;
-	overflow-x: hidden;
+/* 	overflow-x: hidden; */
 	margin: 0;
 	font-family: "Poppins", sans-serif;
 	-webkit-font-smoothing: antialiased;
@@ -410,7 +410,10 @@ header {
 	margin-left: 100px;
 }
 
-.info-a img, .info-b img {
+.info-a img {
+	width: 27px;
+}
+.info-b img {
 	width: 30px;
 }
 
@@ -418,8 +421,39 @@ header {
 	margin-left: 10px;
 }
 
-.right-icons img {
+.right-icons {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+
+.user-account {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.user-account img {
 	width: 28px;
+	margin-right: 15px;
+}
+
+.user-account span {
+	font-size: 1em;
+}
+
+.user-icon {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.right-icons a img {
+	width: 27px;
+}
+
+.right-icons a {
+	width: fit-content;
 	margin-left: 15px;
 }
 
@@ -798,6 +832,10 @@ header {
 			 CAROUSEL #2
 ================================== */
 
+.mobile-carousel {
+	display: none;
+}
+
 #last-carousel-home {
 	width: 100%;
 	display: flex;
@@ -910,6 +948,10 @@ header {
 }
 
 .home2-carousel-slides {
+	display: none;
+}
+
+.home3-carousel-slides {
 	display: none;
 }
 
@@ -2595,9 +2637,16 @@ header {
 	display: flex;
 	justify-content: center;
 	align-self: center;
-	flex-flow: column;
 	text-align: center;
 	margin: 50px 0;
+}
+
+.intersection {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: column;
 }
 
 .inter-section img {

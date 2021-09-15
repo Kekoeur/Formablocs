@@ -141,9 +141,7 @@ require_once (__DIR__ . '/includes/header.php');
 			</div>
 	
 			<div class="carousel-container2">
-
-
-			<div class="home-carousel">
+				<div class="home-carousel">
 					<div class="finance-carousel-container">
 						<div class="home-carousel-left-arrow">
 							<img src="<?=$domain?>/icons/FLECHE GAUCHE BLEUE.svg" alt="Précedent" id="prev-home2">
@@ -151,64 +149,107 @@ require_once (__DIR__ . '/includes/header.php');
 
 						<div class="home-carousel-container">
 
-								<div class="group-slider home2-carousel-slides current-home2-carousel">
-									<div class="slider-card">
-										<div class="slider-card-img">
-											<img src="assets/img/people/aerial-view-hands-working-computer-white-table-office.jpg" alt="">
-										</div>
-										<a href="#">Digitalisation</a>
+							<div class="group-slider home2-carousel-slides current-home2-carousel">
+								<div class="slider-card">
+									<div class="slider-card-img">
+										<img src="assets/img/people/aerial-view-hands-working-computer-white-table-office.jpg" alt="">
 									</div>
-
-									<div class="slider-card slider-relative">
-										<img src="assets/icons/ROND ORANGE.svg" alt="">
-										<img src="assets/icons/ROND ORANGE.svg" alt="">
-										<div class="slider-card-img relative-img">
-											<img src="assets/img/people/christina-wocintechchat-com-4PU-OC8sW98-unsplash.jpg" alt="">
-										</div>
-										<a href="#">Qualité</a>
-									</div>
-
-									<div class="slider-card">
-										<div class="slider-card-img">
-											<img src="assets/img/people/christina-wocintechchat-com-eF7HN40WbAQ-unsplash.jpg" alt="">
-										</div>
-										<a href="#">RNCP</a>
-									</div>
+									<a href="#">Digitalisation</a>
 								</div>
 
-								<div class="group-slider home2-carousel-slides">
-									<div class="slider-card">
-										<div class="slider-card-img">
-											<img src="assets/img/people/aerial-view-hands-working-computer-white-table-office.jpg" alt="">
-										</div>
-										<a href="#">Digitalisation</a>
+								<div class="slider-card slider-relative">
+									<img src="assets/icons/ROND ORANGE.svg" alt="">
+									<img src="assets/icons/ROND ORANGE.svg" alt="">
+									<div class="slider-card-img relative-img">
+										<img src="assets/img/people/christina-wocintechchat-com-4PU-OC8sW98-unsplash.jpg" alt="">
 									</div>
-
-									<div class="slider-card slider-relative">
-										<img src="assets/icons/ROND ORANGE.svg" alt="">
-										<img src="assets/icons/ROND ORANGE.svg" alt="">
-										<div class="slider-card-img relative-img">
-											<img src="assets/img/people/christina-wocintechchat-com-4PU-OC8sW98-unsplash.jpg" alt="">
-										</div>
-										<a href="#">Qualité</a>
-									</div>
-
-									<div class="slider-card">
-										<div class="slider-card-img">
-											<img src="assets/img/people/christina-wocintechchat-com-eF7HN40WbAQ-unsplash.jpg" alt="">
-										</div>
-										<a href="#">RNCP</a>
-									</div>
+									<a href="#">Qualité</a>
 								</div>
 
+								<div class="slider-card">
+									<div class="slider-card-img">
+										<img src="assets/img/people/christina-wocintechchat-com-eF7HN40WbAQ-unsplash.jpg" alt="">
+									</div>
+									<a href="#">RNCP</a>
+								</div>
 							</div>
+
+							<div class="group-slider home2-carousel-slides">
+								<div class="slider-card">
+									<div class="slider-card-img">
+										<img src="assets/img/people/aerial-view-hands-working-computer-white-table-office.jpg" alt="">
+									</div>
+									<a href="#">Digitalisation</a>
+								</div>
+
+								<div class="slider-card slider-relative">
+									<img src="assets/icons/ROND ORANGE.svg" alt="">
+									<img src="assets/icons/ROND ORANGE.svg" alt="">
+									<div class="slider-card-img relative-img">
+										<img src="assets/img/people/christina-wocintechchat-com-4PU-OC8sW98-unsplash.jpg" alt="">
+									</div>
+									<a href="#">Qualité</a>
+								</div>
+
+								<div class="slider-card">
+									<div class="slider-card-img">
+										<img src="assets/img/people/christina-wocintechchat-com-eF7HN40WbAQ-unsplash.jpg" alt="">
+									</div>
+									<a href="#">RNCP</a>
+								</div>
+							</div>
+
+						</div>
 
 						<div class="home-carousel-right-arrow">
 							<img src="<?=$domain?>/icons/FLECHE DROITE BLEUE.svg" alt="Suivant" id="next-home2">
 						</div>
 					</div>
 				</div>
+
+				<div class="mobile-carousel">
+					<div class="finance-carousel-container">
+
+						<div class="home-carousel-left-arrow">
+							<img src="<?=$domain?>/icons/FLECHE GAUCHE BLEUE.svg" alt="Précedent" id="prev-home3">
+						</div>
+
+						<div class="mobile-carousel-container">
+
+							<div class="slider-card home3-carousel-slides current-home2-carousel">
+								<div class="slider-card-img">
+									<img src="assets/img/people/aerial-view-hands-working-computer-white-table-office.jpg" alt="">
+								</div>
+								<a href="#">Digitalisation</a>
+							</div>
+
+							<div class="slider-card slider-relative home3-carousel-slides">
+								<img src="assets/icons/ROND ORANGE.svg" alt="">
+								<img src="assets/icons/ROND ORANGE.svg" alt="">
+								<div class="slider-card-img relative-img">
+									<img src="assets/img/people/christina-wocintechchat-com-4PU-OC8sW98-unsplash.jpg" alt="">
+								</div>
+								<a href="#">Qualité</a>
+							</div>
+
+							<div class="slider-card home3-carousel-slides">
+								<div class="slider-card-img">
+									<img src="assets/img/people/christina-wocintechchat-com-eF7HN40WbAQ-unsplash.jpg" alt="">
+								</div>
+								<a href="#">RNCP</a>
+							</div>
+							
+
+						</div>
+
+						<div class="home-carousel-right-arrow">
+							<img src="<?=$domain?>/icons/FLECHE DROITE BLEUE.svg" alt="Suivant" id="next-home3">
+						</div>
+
+					</div>
+				</div>
 			</div>
+			
 			<div class="cta-btn-carousel">
 				<a href="#" class="red-hover"><button>Découvrir nos prestations</button></a>
 			</div>

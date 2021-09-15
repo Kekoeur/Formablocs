@@ -36,17 +36,21 @@ require_once (__DIR__ . '/includes/header.php');
 </section>
 
 <div class="inter-section">
-	<h1>Le saviez-vous ?</h1>
-	<img src="assets/icons/FLECHE ORANGE.svg" alt="">
+	<div class="container">
+		<div class="intersection">
+			<h1>Le saviez-vous ?</h1>
+			<img src="assets/icons/FLECHE ORANGE.svg" alt="">
 
-	<h4>Nos parcours sont accessibles par la voie de la VAE (Validation des Acquis de l'Expérience).</h4>
-	
-	<div class="inter-wrapper">
-		<h5>Vous souhaitez avoir plus d'informations ?</h5>
-		<p>Direction sur : <a href="https://www.vae.gouv.fr/">https://www.vae.gouv.fr/</a></p>
+			<h4>Nos parcours sont accessibles par la voie de la VAE (Validation des Acquis de l'Expérience).</h4>
+			
+			<div class="inter-wrapper">
+				<h5>Vous souhaitez avoir plus d'informations ?</h5>
+				<p>Direction sur : <a href="https://www.vae.gouv.fr/">https://www.vae.gouv.fr/</a></p>
+			</div>
+
+			<a href="financement.php" class="red-hover"><button>Mes options de financement</button></a>
+		</div>
 	</div>
-
-	<a href="financement.php" class="red-hover"><button>Mes options de financement</button></a>
 </div>
 
 <section id="formations">
