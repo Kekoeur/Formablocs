@@ -9,8 +9,8 @@ $user = $pdo->query("SELECT * FROM customers WHERE id='". $_SESSION['user_id'] .
 $loggedIn = $user->fetch(PDO::FETCH_ASSOC);
 
 if ($_GET) {
-	$stm = $pdo->prepare("SELECT * FROM toutes_formations WHERE formation = ?");
-	$stm->bindValue(1, $_GET['formation']);
+	$stm = $pdo->prepare("SELECT * FROM toutes_formations WHERE link = ?");
+	$stm->bindValue(1, $_GET['link']);
 	$stm->execute();
 	$row = $stm->fetch(PDO::FETCH_ASSOC);
 }
@@ -39,7 +39,7 @@ $checkout_session = $stripe->checkout->sessions->create([
 		'card',
 	],
 	'mode' => 'payment',
-	'metadata' => [
+ 	'metadata' => [
 		'date' => $date
 	],
 	'customer' => $userID,

@@ -16,16 +16,16 @@ $dateArray = explode(',', $formationsDate);
 
 $objetFormations = (object) $formationArray;
 $objetDate = (object) $dateArray;
-
-foreach ($formationArray as $formationName) {
-    $nomFormation = $pdo->query("SELECT * FROM formations WHERE formation = \"$formationName\"");
+foreach ($formationArray as $price_f) {
+    $nomFormation = $pdo->query("SELECT * FROM toutes_formations WHERE price_id = \"$price_f\"");
 	$form = $nomFormation->fetchall(PDO::FETCH_ASSOC);
+	$name = $form[0]['formation'];
+	$picto = $form[0]['picto'];
 }
 
 foreach ($dateArray as $dateOnly) {
 	$dateOnly = $dateOnly;
 }
-
 ?>
 
 <?php
@@ -80,16 +80,16 @@ require_once (__DIR__ . '/../includes/header.php');
 			<h1>Mes formations et accompagnements</h1>
 			<div class="mes-formations-list">
 
-				<?php foreach($formationArray as $formation) { ?>
+				<?php foreach($formationArray as $formation) {?>
 
 					<div class="mes-formations-card">
 						<div class="mes-formations-card-text">
-							<h3><?=$formation?></h3>
+							<h3><?=$name?></h3>
 							<p>Commencée le : <?=$dateOnly?></p>
 						</div>
-<!-- 					<div class="mes-formations-card-picto">
-							<img src="/icons/" alt="">
-						</div> -->
+ 						<div class="mes-formations-card-picto">
+							<img src="<?=$domain?>/icons/<?=$picto?>" alt="">
+						</div>
 					</div>
 
 				<?php } ?>

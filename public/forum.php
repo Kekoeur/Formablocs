@@ -132,7 +132,7 @@ require_once (__DIR__ . '/includes/header.php');
 			<div class="forum-bottom">
 				<h1>Vous ne trouvez pas votre bonheur sur le forum ?</h1>
 				<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum est eligendi enim animi perspiciatis, quae error officia magni illo? Dolores.</p>
-				<a href="<?=$domain?>/../contact.php"><button>Nous contacter</button></a>
+				<a href="<?=$domain?>/../contact.php" class="red-hover"><button>Nous contacter</button></a>
 			</div>
 		</div>
 	</div>

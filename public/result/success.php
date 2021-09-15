@@ -8,7 +8,6 @@ $dotenv->load();
 
 $secretKey = $_ENV['STRIPE_SECRET_KEY'];
 $stripe = new \Stripe\StripeClient($secretKey);
-
 // ================= RECUPERER ID DE LA SESSION DE PAIEMENT DU CLIENT
 
 $sessionID = $_SESSION['session'];
@@ -21,22 +20,26 @@ $date = $sessionDetails->metadata->date;
 
 $retrievePrice = $stripe->prices->retrieve($priceID,[]);
 $retrieveProd = $retrievePrice->product;
-
 $prodInfo = $stripe->products->retrieve($retrieveProd,[]);
 $prodName = $prodInfo->name;
 
-// ================= AJOUTER ID STRIPE CLIENT DANS DATABASE
+// ================= RECUPERATION ET CONCATENATION DES INFOS DE LA BDD
+$query_user = $pdo->query("SELECT * FROM customers WHERE email = \"$customerEmail\"");
+$user = $query_user->fetchall(PDO::FETCH_ASSOC);
+$prodName = $priceID. ', '. $user[0]['formations'];
+$date = $date. ', '. $user[0]['purchased_date'];
 
+// ================= AJOUTER ID STRIPE CLIENT DANS DATABASE
 $stripeInfo = [
 	'stripe_id' => $customerID,
 	'customer_email' => $customerEmail,
-	'formation' =>  $prodName,
-	'date' => $date
+	'formations' =>  $prodName,
+	'dates' => $date
 ];
-
-$sql = "UPDATE customers SET stripe_id = :stripe_id, formations = CONCAT(:formation, ', ', formations), purchased_date = CONCAT(:date, ', ', purchased_date) WHERE email = :customer_email";
+$sql = "UPDATE customers SET stripe_id = :stripe_id, formations = :formations, purchased_date = :dates WHERE email = :customer_email";
 $stmt = $pdo->prepare($sql);
 $stmt->execute($stripeInfo);
+
 
 ?>
 
@@ -52,7 +55,7 @@ require_once (__DIR__ . '/../includes/header.php');
 		<div class="success-container">
 			<div class="success-top">
 				<h1>Confirmation de votre commande</h1>
-				<img src="/Projet%204/public/assets/illustrations/ILLUSTRATIONS PAIEMENT SUCCES.svg" alt="">
+				<img src="<?=$domainURL?>/illustrations/ILLUSTRATIONS PAIEMENT SUCCES.svg" alt="">
 				<div class="recap-success">
 					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, delectus?</p>
 				</div>
@@ -61,7 +64,7 @@ require_once (__DIR__ . '/../includes/header.php');
 				<h1>Merci beaucoup pour votre achat !</h1>
 				<h4>Un reçu vous a été envoyé sur votre boîte mail.</h4>
 				<p>Si vous n'avez rien reçu, veuillez cliquez <a href="#">ici</a></p>
-				<a href="/Projet%204/public/index.php"><button>Retour à l'accueil</button></a>
+				<a href="<?=$domainURL?>/../index.php"><button>Retour à l'accueil</button></a>
 			</div>
 		</div>
 	</div>

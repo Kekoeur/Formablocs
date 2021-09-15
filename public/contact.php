@@ -121,7 +121,7 @@ require_once (__DIR__ . '/includes/header.php');
 				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui molestias quos eos perspiciatis autem necessitatibus corporis, cum non? Amet nemo ea eligendi, doloremque expedita minima odio animi totam magnam itaque cumque ipsum neque aut laudantium.</p>
 			</div>
 
-			<form id="contact-form" method="POST" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>">
+			<form id="contact-form" method="POST" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" class="red-hover">
 
 				<div class="contact-row">
 					<div class="contact-group">

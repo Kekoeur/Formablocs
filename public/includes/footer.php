@@ -1,3 +1,4 @@
+
 <footer>
 	<div class="container">
 		<div class="foot-cols">			
@@ -51,13 +52,16 @@
 		</div>
 	</div>
 	<div class="foot-footer">
-		<div class="footer-links">
-			<a href="#">Mentions légales et politiques de confidentialité</a>
-			<a href="#">Conditions générales d'utilisation</a>
-			<a href="#">Conditions générales de vente</a>
+		<div class="container">
+			<div class="footer-links">
+				<a href="#">Mentions légales et politiques de confidentialité</a>
+				<a href="#">Conditions générales d'utilisation</a>
+				<a href="#">Conditions générales de vente</a>
+			</div>
 		</div>
 	</div>
 </footer>
 
+<script src="/Projet%204/public/assets/js/mobile.js"></script>
 </body>
 </html>
