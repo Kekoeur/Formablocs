@@ -2837,6 +2837,9 @@ header {
 	justify-content: center;
 	align-items: center;
 }
+.card-btns form.already_purchased {
+	width: 100%;
+}
 
 .card-btns form button {
 	width: 420px;
