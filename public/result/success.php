@@ -8,7 +8,6 @@ $dotenv->load();
 
 $secretKey = $_ENV['STRIPE_SECRET_KEY'];
 $stripe = new \Stripe\StripeClient($secretKey);
-
 // ================= RECUPERER ID DE LA SESSION DE PAIEMENT DU CLIENT
 
 $sessionID = $_SESSION['session'];
@@ -38,7 +37,6 @@ $stripeInfo = [
 	'formations' =>  $prodName,
 	'dates' => $date
 ];
-echo json_encode($stripeInfo);
 $sql = "UPDATE customers SET stripe_id = :stripe_id, formations = :formations, purchased_date = :dates WHERE email = :customer_email";
 $stmt = $pdo->prepare($sql);
 $stmt->execute($stripeInfo);
