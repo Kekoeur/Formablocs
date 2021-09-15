@@ -17,7 +17,7 @@ if ($_GET) {
 
 $price_id = $row['price_id'];
 
-date_default_timezone_set("Europe/Paris");
+date_default_timezone_set("France/Paris");
 $date = date("d/m/Y");
 
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
