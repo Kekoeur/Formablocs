@@ -25,18 +25,24 @@ $retrieveProd = $retrievePrice->product;
 $prodInfo = $stripe->products->retrieve($retrieveProd,[]);
 $prodName = $prodInfo->name;
 
-// ================= AJOUTER ID STRIPE CLIENT DANS DATABASE
+// ================= RECUPERATION ET CONCATENATION DES INFOS DE LA BDD
+$query_user = $pdo->query("SELECT * FROM customers WHERE email = \"$customerEmail\"");
+$user = $query_user->fetchall(PDO::FETCH_ASSOC);
+$prodName = $prodName. ', '. $user[0]['formations'];
+$date = $date. ', '. $user[0]['purchased_date'];
 
+// ================= AJOUTER ID STRIPE CLIENT DANS DATABASE
 $stripeInfo = [
 	'stripe_id' => $customerID,
 	'customer_email' => $customerEmail,
-	'formation' =>  $prodName,
-	'date' => $date
+	'formations' =>  $prodName,
+	'dates' => $date
 ];
-
-$sql = "UPDATE customers SET stripe_id = :stripe_id, formations = CONCAT(:formation, ', ', formations), purchased_date = CONCAT(:date, ', ', purchased_date) WHERE email = :customer_email";
+echo json_encode($stripeInfo);
+$sql = "UPDATE customers SET stripe_id = :stripe_id, formations = :formations, purchased_date = :dates WHERE email = :customer_email";
 $stmt = $pdo->prepare($sql);
 $stmt->execute($stripeInfo);
+
 
 ?>
 

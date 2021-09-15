@@ -180,7 +180,7 @@ if(isset($_POST['submit_signup'])){
 				if($run_query->rowCount() > 0 ){
 				echo "<p class=\"comments\">Le nom d'utilisateur est déja enregistrer</p>";
 				} else { // ================= Sinon l'enregister
-					$passHash = password_hash($_POST['password'], PASSWORD_BCRYPT);
+					$passHash = password_hash($password, PASSWORD_BCRYPT);
 
 					$newCustomer = $stripe->customers->create([
 						"email" => $email,
@@ -188,15 +188,19 @@ if(isset($_POST['submit_signup'])){
 					]);
 
 					$customerStripeID = $newCustomer->id;
-          $sql = "INSERT INTO customers (name, username, email, passw, stripe_id) VALUES (?, ?, ?, ?, ?)";
-          $run_register_query= $pdo->prepare($sql);
+         			$sql = "INSERT INTO customers (name, username, email, passw, stripe_id) VALUES (?, ?, ?, ?, ?)";
+         			$run_register_query= $pdo->prepare($sql);
 					if($run_register_query->execute([$name, $username, $email, $passHash, $customerStripeID])){
 						$user = $pdo->query("SELECT * FROM customers WHERE stripe_id='". $customerStripeID . "'");
 						$loggedIn = $user->fetch(PDO::FETCH_ASSOC);
+						
+						$_SESSION['user_id'] = $loggedIn['id'];
+						$_SESSION['user_name'] = $loggedIn['username'];
 
-            $_SESSION['user_id'] = $loggedIn['id'];
-            $_SESSION['user_name'] = $loggedIn['username'];
-						header("Location: /index.php");
+						$URL=$domain.'/../index.php';
+						echo "<script type='text/javascript'>document.location.href='{$URL}';</script>";
+						echo '<META HTTP-EQUIV="refresh" content="0;URL=' . $URL . '">';
+						
 					} else {
 						echo "<p class=\"comments\">ERROR! Impossible de vous enregistrer maintenant, veuillez reéssayer</p>";
 					}
