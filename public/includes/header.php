@@ -20,6 +20,7 @@ require_once (__DIR__ . '../../db/global_db.php');
 	
 	<!-- ================= CSS ================= -->
 	<link rel="stylesheet" href="<?=$domain?>/css/style.css">
+	<link rel="stylesheet" href="<?=$domain?>/css/responsive.css">
 	<link rel="stylesheet" href="https://use.typekit.net/afv1gmg.css">
 
 	<!-- ================ SCRIPTS ================ -->
