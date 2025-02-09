@@ -1,6 +1,6 @@
 <?php
 
-$domain = '/Projet%204/public/assets';
+$domain = getenv('DOMAIN_URL') ?: '/assets';
 require_once (__DIR__ . '../../db/global_db.php');
 
 ?>

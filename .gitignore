@@ -1,0 +1,32 @@
+# Fichiers sensibles et de configuration
+.env
+.env.local
+.env.*.local
+
+# Dépendances (composer)
+vendor/
+
+# Fichiers générés par Composer
+composer.lock
+
+# Fichiers de logs
+*.log
+
+# Sessions et caches PHP
+sess_*
+php_errors.log
+
+# Dossiers et fichiers générés par l'IDE
+.idea/
+.vscode/
+*.bak
+*.swp
+
+# Fichiers système (Windows / macOS)
+.DS_Store
+Thumbs.db
+
+# Caches et fichiers temporaires
+/cache/
+*.cache
+/tmp/

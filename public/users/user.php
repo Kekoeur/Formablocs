@@ -14,25 +14,23 @@ $formationArray = explode(',', $formationsList);
 $formationsDate = substr($userPurchase, 0, -2);
 $dateArray = explode(',', $formationsDate);
 
-$objetFormations = (object) $formationArray;
-$objetDate = (object) $dateArray;
-foreach ($formationArray as $price_f) {
+// Associer chaque formation à sa date
+$formationsData = [];
+
+foreach ($formationArray as $index => $price_f) {
     $nomFormation = $pdo->query("SELECT * FROM toutes_formations WHERE price_id = \"$price_f\"");
-	$form = $nomFormation->fetchall(PDO::FETCH_ASSOC);
-	$name = $form[0]['formation'];
-	$picto = $form[0]['picto'];
+    $form = $nomFormation->fetch(PDO::FETCH_ASSOC);
+
+    $formationsData[] = [
+        'name' => $form['formation'] ?? "Aucune formation trouvée",
+        'picto' => $form['picto'] ?? "",
+        'date' => $dateArray[$index] ?? "Date inconnue",
+    ];
 }
 
-foreach ($dateArray as $dateOnly) {
-	$dateOnly = $dateOnly;
-}
 ?>
 
-<?php
-
-require_once (__DIR__ . '/../includes/header.php');
-
-?>
+<?php require_once (__DIR__ . '/../includes/header.php'); ?>
 
 <section id="home">
 	<div class="home-bg">
@@ -80,28 +78,29 @@ require_once (__DIR__ . '/../includes/header.php');
 			<h1>Mes formations et accompagnements</h1>
 			<div class="mes-formations-list">
 
-				<?php foreach($formationArray as $formation) {?>
-
+			<?php if (!empty($formationsData)) { ?>
+				<?php foreach ($formationsData as $formation) { ?>
 					<div class="mes-formations-card">
 						<div class="mes-formations-card-text">
-							<h3><?=$name?></h3>
-							<p>Commencée le : <?=$dateOnly?></p>
+							<h3><?= $formation['name'] ?></h3>
+							<?php if (!empty($formation['picto'])) { ?>
+								<p>Commencée le : <?= $formation['date'] ?></p>
+							<?php } ?>
 						</div>
- 						<div class="mes-formations-card-picto">
-							<img src="<?=$domain?>/icons/<?=$picto?>" alt="">
-						</div>
+						<?php if (!empty($formation['picto'])) { ?>
+							<div class="mes-formations-card-picto">
+								<img src="<?= $domain ?>/icons/<?= $formation['picto'] ?>" alt="">
+							</div>
+						<?php } ?>
 					</div>
-
 				<?php } ?>
+			<?php } else { ?>
+				<p>Aucune formation trouvée.</p>
+			<?php } ?>
+
 			</div>
 		</div>
 	</div>
 </section>
 
-
-
-<?php
-
-require_once (__DIR__ . '/../includes/footer.php');
-
-?>
+<?php require_once (__DIR__ . '/../includes/footer.php'); ?>

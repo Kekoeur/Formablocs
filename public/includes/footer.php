@@ -3,13 +3,13 @@
 	<div class="container">
 		<div class="foot-cols">			
 			<div class="ft-col" itemscope itemtype="https://schema.org/Organization">
-				<img itemprop="logo" src="/Projet%204/public/assets/img/LOGO FOOTER.svg" alt="">
+				<img itemprop="logo" src="<?= $domain ?>/img/LOGO FOOTER.svg" alt="">
 				<p>c'est un accompagnement individualisé, un parcours adapté à vos contraintes</p>
 				<div class="ft-icons">
-					<img src="/Projet%204/public/assets/icons/INSTAGRAM.svg" alt="Instagram | Formablocs">
-					<img src="/Projet%204/public/assets/icons/TWITTER.svg" alt="Twitter | Formablocs">
-					<img src="/Projet%204/public/assets/icons/FACEBOOK.svg" alt="Facebook | Formablocs">
-					<img src="/Projet%204/public/assets/icons/LINEKEDIN.svg" alt="Linkedin | Formablocs">
+					<img src="<?= $domain ?>/icons/INSTAGRAM.svg" alt="Instagram | Formablocs">
+					<img src="<?= $domain ?>/icons/TWITTER.svg" alt="Twitter | Formablocs">
+					<img src="<?= $domain ?>/icons/FACEBOOK.svg" alt="Facebook | Formablocs">
+					<img src="<?= $domain ?>/icons/LINEKEDIN.svg" alt="Linkedin | Formablocs">
 				</div>
 				<p>
 					<span>Tél : </span><i itemprop="telephone">02 00 99 11 88</i><br>
@@ -62,6 +62,6 @@
 	</div>
 </footer>
 
-<script src="/Projet%204/public/assets/js/mobile.js"></script>
+<script src="<?= $domain ?>/js/mobile.js"></script>
 </body>
 </html>
